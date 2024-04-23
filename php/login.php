@@ -1,7 +1,5 @@
 <?php
-    
-
-    session_start();
+session_start();
     
     include("connection.php");
     include("funcs.php");
@@ -19,43 +17,41 @@
         {
 
 
-          /* -------------------------------------------------------------------------- */
-          /*                                read from db                                */
-          /* -------------------------------------------------------------------------- */
+            /* -------------------------------------------------------------------------- */
+            /*                                read from db                                */
+            /* -------------------------------------------------------------------------- */
 
-            $query = "select * from users where user_name = '$user_name' limit 1";
 
+            $query = "select * from users where user_name = '$user_name' limit 1 ";
             
-            $result = mysqli_query($con, $query);
+           $result =  mysqli_query($con, $query);
+
             if($result)
             {
                 if($result && mysqli_num_rows($result) > 0)
-                   {
-                    $user_data = mysqli_fetch_assoc($result);
-                    if($user_data['password'] === $password)
-                        {
-                            $_SESSION['$user_id'] = $user_data['$user_id'];
-                            header("Location: index.php");
-                            die;   
-                        }
-                }
+                    {
+                            $user_data = mysqli_fetch_assoc($result);
+                            if($user_data['password'] === $password)
+                                {
+                                    $_SESSION['user_id'] = $user_data['$user_id'] ;
+                                    header("Location: index.php");
+                                    die;
+                                    
+                                }
+                    }
             }
-
-
-            echo "!!wrong username or password!!";
-         
-
+   
+            echo "!!wrong password or username!!";
         }
         else
         {
-            echo "!!wrong username or password!!";
+            echo "!!please enter some valid infornaation!!";
         }
 
 
 
     }
-
-
+    
 
 ?>
 
