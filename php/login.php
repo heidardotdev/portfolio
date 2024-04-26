@@ -16,6 +16,7 @@ session_start();
         if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
         {
 
+            
 
             /* -------------------------------------------------------------------------- */
             /*                                read from db                                */
