@@ -1,10 +1,5 @@
 <?php
-session_start();
-    
-    include("connection.php");
-    include("funcs.php");
-    
-    $user_data = check_login($con);
+
 
 ?>
 
@@ -65,7 +60,7 @@ session_start();
             <div class="row align-items-center">
                 <div class="col-12 col-lg-7">
                     <div class="home__content">
-                        <h3 class="home__name">Hello, IM <span>White Alexa</span></h3>
+                        <h3 class="home__name">Hello, IM    <span> <?php echo $user_data['user_name']; ?>  </span></h3>
                         <h2 class="home__title">Creative Designer</h2>
                         <p class="home__caption">Freelancer Web/ Mobile UI/UX Designer with Motion Graphics</p>
                         <div class="home__links-wrapper">
