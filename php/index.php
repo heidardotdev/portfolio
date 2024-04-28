@@ -12,9 +12,417 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WA. | Landing</title>
     <link rel="icon" type="image/png" href="../images/app-logo.png">
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/swiper-bundle.min.css">
+    <style>
+        @media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .home__photo {
+        width: 45rem;
+        height: 45rem;
+    }
+
+    .home {
+        height: 76rem;
+    }
+}
 
 
-    <header class="header">
+@media screen and (max-width: 1200px) {
+    .home__photo {
+        width: 38rem;
+        height: 38rem;
+    }
+
+    .home {
+        height: 68rem;
+    }
+
+    .about__cover,
+    .about__content {
+        flex-basis: 50%;
+    }
+
+    .service {
+        padding: 7rem 2rem;
+    }
+
+    .resume-list {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html{
+        cursor: default;
+    }
+    .nav__logo {
+        font-size: 5rem;
+    }
+
+    .menu__item {
+        margin-right: 2rem;
+    }
+
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home__photo {
+        margin: 0 auto;
+        width: 36rem;
+        height: 36rem;
+    }
+
+    .home {
+        margin-top: 6rem;
+        background-image: none;
+        height: auto;
+    }
+
+    .home .row {
+        flex-direction: column-reverse;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about__cover,
+    .about__content {
+        flex-basis: auto;
+    }
+
+    .resume-list__item--active {
+        background-color: var(--primary-color);
+    }
+
+    .resume-list::before,
+    .resume-list__item::before,
+    .resume-content__title::before {
+        content: none;
+    }
+
+    .resume-list__icon {
+        display: none;
+    }
+
+    .resume-list {
+        flex-direction: row;
+        gap: .5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        min-height: auto;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .resume-list__item {
+        border-radius: 4rem;
+        padding: 1.2rem 3rem;
+        margin-bottom: 0;
+        transition: all 120ms ease-in;
+    }
+
+    .resume-list__text {
+        font-size: 1.6rem;
+        margin: 0;
+        font-family: "Poppins";
+        transition: none;
+    }
+
+    .resume-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .contactus__map {
+        display: none;
+    }
+
+    .contact {
+        margin-right: auto;
+    }
+    .upload{
+        width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    }
+    .upload h2{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        background-color: var(--section-bg-color);
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        transition: all 120ms ease-in;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .menu--open {
+        height: 33rem;
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .menu__item:first-child {
+        margin-top: 2rem;
+    }
+
+    .nav__toggle-icon {
+        display: flex;
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 10%);
+        z-index: -1;
+        opacity: 0;
+        transition: all 200ms ease-in;
+    }
+
+    .cover--show {
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .home {
+        margin-top: 4rem;
+    }
+
+    .home__photo {
+        width: 34rem;
+        height: 34rem;
+        border-width: 1.5rem;
+    }
+
+    .about__content {
+        padding: 2rem 4rem;
+    }
+
+    .service {
+        padding: 4rem 1rem;
+    }
+
+    .service__icon {
+        width: 6rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home__title {
+        font-size: 4rem;
+    }
+
+    .home__name {
+        font-size: 2rem;
+    }
+
+    .home__photo {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .about__link {
+        width: 100%;
+    }
+
+    .about__content {
+        padding: 2rem;
+    }
+
+    .service {
+        padding: 5rem 2rem;
+    }
+
+    .service__wave {
+        display: none;
+    }
+
+    .footer__wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .service__wave {
+        display: block;
+    }
+
+    .contact {
+        padding: 4.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .home__title {
+        font-size: 3rem;
+    }
+
+    .home__links-wrapper {
+        width: 100%;
+    }
+
+    .home__link {
+        width: 100%;
+    }
+
+    .home__photo {
+        width: 26rem;
+        height: 26rem;
+        border-width: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .about__content{
+        padding: 0;
+    }
+    .about__content h4{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.home__photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           upload the file styles                           */
+/* -------------------------------------------------------------------------- */
+        /* Optional: Add some styling to the editable h1 */
+        #editableH1{
+            text-transform: capitalize;
+        }
+
+        /* Style the input field */
+        input[type="text"] {
+            display: none;
+        }
+
+        /* Style the Save button */
+        #saveBtn {
+            display: none;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #editIcon{
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+.upload,
+.about-text-upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 3rem;
+    border: .3rem dashed rgb(255, 217, 0);
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    backdrop-filter: blur(1rem);
+    cursor: pointer;
+    box-shadow: 0 0 4rem -1rem rgba(255, 217, 0, .27);
+}
+.about-text-upload{
+    overflow: visible;
+}
+.upload h2{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 5rem;
+}
+
+#file {
+    transform: scale(100);
+    opacity: 0;
+
+}
+.about-upload{
+    display:none;
+}
+.about-title-icon{
+    border: .3rem dashed rgb(255, 217, 0);
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 1.4rem;
+
+}
+.about-title-input{
+    color:#95a5c6;
+    font-family: "Poppins SemiBold";
+    font-size: 2.4rem;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+#saveBtn{
+    display: none;
+    width: 100%;
+    border: 0.3rem dashed rgb(255, 217, 0);
+    background: transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.about__content{
+    display: flex;
+    padding: 4rem;
+    align-items: baseline;
+    justify-content: start;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+}
+    </style>
+</head>
+<body>
+
+<header class="header">
     <div class="container">
         <nav class="nav">
             <h1 class="nav__logo">WA.</h1>
