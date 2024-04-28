@@ -1,0 +1,9 @@
+- change the text (content of the body) and save them into the db using php + commit the change
+- about title input : id like when i hit the icon to edit the text the text of the input should deleted and the input is ready to write text✅
+- after change pup up using after and before and js update title or everything eles was succsessful
+
+
+     /* -------------------------------------------------------------------------- */
+                            /*          click the btn and go the sale page and the card and other         */
+                            /* -------------------------------------------------------------------------- */
+                            <a href="#" class="app-btn app-btn--purple package__link">Choose Plan </a>

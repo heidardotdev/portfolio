@@ -330,7 +330,12 @@ body {
     background-position: center top;
     box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
     border: 2rem solid var(--section-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
+
+
 
 
 /*

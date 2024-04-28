@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Items</title>
+    <style>
+        /* Add your CSS styles here */
+        .package-options__item {
+            display: flex;
+            align-items: center;
+        }
+        .package-options__icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="item-list">
+        <!-- Example item -->
+        <li class="package-options__item">
+            <svg class="package-options__icon" width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                <path id="Icon_material-done" data-name="Icon material-done"
+                    d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                    transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+            </svg>
+            <input type="text" class="item-text" value="Business Develop">
+            <input type="color" class="item-color">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </li>
+    </ul>
+
+    <button id="add-item-btn">Add New Item</button>
+    <button id="delete-all-btn">Delete All Items</button>
+
+    <script>
+        const itemList = document.getElementById('item-list');
+        const addItemBtn = document.getElementById('add-item-btn');
+        const deleteAllBtn = document.getElementById('delete-all-btn');
+
+        // Add event listeners for buttons
+        addItemBtn.addEventListener('click', () => {
+            const newItem = document.createElement('li');
+            newItem.classList.add('package-options__item');
+            newItem.innerHTML = `
+                <svg class="package-options__icon" width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                    <!-- Your SVG path here -->
+                </svg>
+                <input type="text" class="item-text" value="New Item">
+                <input type="color" class="item-color">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            `;
+            itemList.appendChild(newItem);
+        });
+
+        deleteAllBtn.addEventListener('click', () => {
+            const items = document.querySelectorAll('.package-options__item');
+            items.forEach((item) => {
+                if (!item.querySelector('.edit-btn') && !item.querySelector('.delete-btn')) {
+                    item.remove();
+                }
+            });
+        });
+
+        // Add functionality for Edit, Save, and Delete buttons
+        itemList.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('edit-btn')) {
+                const textInput = target.parentElement.querySelector('.item-text');
+                textInput.disabled = false;
+                textInput.focus();
+            } else if (target.classList.contains('delete-btn')) {
+                target.parentElement.remove();
+            }
+        });
+
+        // Save edited text on Enter key press
+        itemList.addEventListener('keyup', (event) => {
+            const target = event.target;
+            if (event.key === 'Enter' && target.classList.contains('item-text')) {
+                target.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>

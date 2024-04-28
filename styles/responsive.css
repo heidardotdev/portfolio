@@ -135,6 +135,14 @@
     .contact {
         margin-right: auto;
     }
+    .upload{
+        width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    }
+    .upload h2{
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -276,6 +284,11 @@
 }
 
 @media screen and (max-width: 350px) {
-
+    .about__content{
+        padding: 0;
+    }
+    .about__content h4{
+        font-size: 1.5rem;
+    }
 }
 
