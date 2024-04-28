@@ -1,42 +1,49 @@
-<div style="display: flex;">
-    <h1 class="about__title" id="editableH1">Why Choose me ?</h1>
-    <i style="font-size: 2rem;" id="editIcon" onclick="startEditing()" class="about-title-icon" autofocus>✏️</i>
-    <i style="font-size: 2rem;" id="deleteIcon" onclick="deleteDiv()" class="about-title-icon">🗑️fff</i>
-    <input type="text" id="editInput" class="about-title-input" style="display: none;">
-    <button id="saveBtn" onclick="saveText()" style="display: none;">Save</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable H1</title>
+    <style>
+        /* Add any additional styling here */
+    </style>
+</head>
+<body>
+    <h1 id="editableH1">Hello, World!</h1>
+    <button id="editButton" onclick="editH1()">Edit</button>
+    <input type="color" id="colorPicker" onchange="changeTextColor()">
+    <button id="deleteButton" onclick="deleteH1()">Delete</button>
 
-<script>
-    const editableH1 = document.getElementById('editableH1');
-    const editInput = document.getElementById('editInput');
-    const saveBtn = document.getElementById('saveBtn');
-    const editIcon = document.getElementById('editIcon');
-    const deleteIcon = document.getElementById('deleteIcon');
+    <script>
+        // Initialize the editable H1 text
+        let h1Text = "Hello, World!";
+        const h1Element = document.getElementById("editableH1");
 
-    function startEditing() {
-        editInput.value = editableH1.textContent;
-        editInput.style.display = 'block';
-        saveBtn.style.display = 'block';
-        editableH1.style.display = 'none';
-        editIcon.style.display = 'none';
-    }
+        // Function to edit the H1 text
+        function editH1() {
+            const newText = prompt("Enter new text for H1:");
+            if (newText !== null) {
+                h1Text = newText;
+                h1Element.textContent = h1Text;
+            }
+        }
 
-    function saveText() {
-        const updatedText = editInput.value;
-        // Handle saving the updated text (e.g., send to server or update database)
-        console.log('Updated text:', updatedText);
-        // For demonstration purposes, I'm just logging the updated text here.
-        // Replace this with your actual database-saving logic.
-        editableH1.textContent = updatedText; // Update the displayed h1 text
-        editInput.style.display = 'none'; // Hide the input field
-        saveBtn.style.display = 'none'; // Hide the Save button
-        editableH1.style.display = 'block'; // Show the h1 again
-        editIcon.style.display = 'flex'; // Show the h1 again
-    }
+        // Function to change the text color
+        function changeTextColor() {
+            const color = document.getElementById("colorPicker").value;
+            h1Element.style.color = color;
+        }
 
-    function deleteDiv() {
-        // Handle deleting the div (e.g., remove it from the DOM)
-        console.log('Div deleted');
-        // Replace this with your actual deletion logic.
-    }
-</script>
+        // Function to delete the H1
+        function deleteH1() {
+            const confirmDelete = confirm("Are you sure you want to delete the H1?");
+            if (confirmDelete) {
+                h1Element.remove();
+                document.getElementById("editButton").remove();
+                document.getElementById("colorPicker").remove();
+                document.getElementById("deleteButton").remove();
+            }
+        }
+    </script>
+</body>
+</html>
