@@ -1,424 +1,14 @@
-<?php
-
-
-?>
-
-
 <!doctype html>
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WA. | Landing</title>
-    <link rel="icon" type="image/png" href="../images/app-logo.png">
+    <title>Personal Website</title>
+    <link rel="icon" type="image/png" href="images/app-logo.png">
     <link rel="stylesheet" href="../styles/app.css">
     <link rel="stylesheet" href="../styles/responsive.css">
     <link rel="stylesheet" href="../styles/swiper-bundle.min.css">
-    <style>
-        @media (min-width: 1400px) {
-    .container {
-        width: 1250px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .home__photo {
-        width: 45rem;
-        height: 45rem;
-    }
-
-    .home {
-        height: 76rem;
-    }
-}
-
-
-@media screen and (max-width: 1200px) {
-    .home__photo {
-        width: 38rem;
-        height: 38rem;
-    }
-
-    .home {
-        height: 68rem;
-    }
-
-    .about__cover,
-    .about__content {
-        flex-basis: 50%;
-    }
-
-    .service {
-        padding: 7rem 2rem;
-    }
-
-    .resume-list {
-        margin-right: 0;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    html{
-        cursor: default;
-    }
-    .nav__logo {
-        font-size: 5rem;
-    }
-
-    .menu__item {
-        margin-right: 2rem;
-    }
-
-    .home__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .home__photo {
-        margin: 0 auto;
-        width: 36rem;
-        height: 36rem;
-    }
-
-    .home {
-        margin-top: 6rem;
-        background-image: none;
-        height: auto;
-    }
-
-    .home .row {
-        flex-direction: column-reverse;
-    }
-
-    .about {
-        flex-direction: column;
-    }
-
-    .about__cover,
-    .about__content {
-        flex-basis: auto;
-    }
-
-    .resume-list__item--active {
-        background-color: var(--primary-color);
-    }
-
-    .resume-list::before,
-    .resume-list__item::before,
-    .resume-content__title::before {
-        content: none;
-    }
-
-    .resume-list__icon {
-        display: none;
-    }
-
-    .resume-list {
-        flex-direction: row;
-        gap: .5rem;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        min-height: auto;
-        box-shadow: none;
-        background-color: transparent;
-    }
-
-    .resume-list__item {
-        border-radius: 4rem;
-        padding: 1.2rem 3rem;
-        margin-bottom: 0;
-        transition: all 120ms ease-in;
-    }
-
-    .resume-list__text {
-        font-size: 1.6rem;
-        margin: 0;
-        font-family: "Poppins";
-        transition: none;
-    }
-
-    .resume-content {
-        border-left: none;
-        padding-left: 0;
-    }
-
-    .contactus__map {
-        display: none;
-    }
-
-    .contact {
-        margin-right: auto;
-    }
-    .upload{
-        width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
-    }
-    .upload h2{
-        font-size: 3rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu {
-        background-color: var(--section-bg-color);
-        position: absolute;
-        top: 100%;
-        flex-direction: column;
-        width: 100%;
-        right: 0;
-        left: 0;
-        align-items: center;
-        justify-content: center;
-        transition: all 120ms ease-in;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .menu--open {
-        height: 33rem;
-    }
-
-    .menu__item {
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .menu__item:first-child {
-        margin-top: 2rem;
-    }
-
-    .nav__toggle-icon {
-        display: flex;
-    }
-
-    .cover {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 10%);
-        z-index: -1;
-        opacity: 0;
-        transition: all 200ms ease-in;
-    }
-
-    .cover--show {
-        opacity: 1;
-        z-index: 99;
-    }
-
-    .home {
-        margin-top: 4rem;
-    }
-
-    .home__photo {
-        width: 34rem;
-        height: 34rem;
-        border-width: 1.5rem;
-    }
-
-    .about__content {
-        padding: 2rem 4rem;
-    }
-
-    .service {
-        padding: 4rem 1rem;
-    }
-
-    .service__icon {
-        width: 6rem;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .home__title {
-        font-size: 4rem;
-    }
-
-    .home__name {
-        font-size: 2rem;
-    }
-
-    .home__photo {
-        width: 30rem;
-        height: 30rem;
-    }
-
-    .about__link {
-        width: 100%;
-    }
-
-    .about__content {
-        padding: 2rem;
-    }
-
-    .service {
-        padding: 5rem 2rem;
-    }
-
-    .service__wave {
-        display: none;
-    }
-
-    .footer__wrapper {
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (max-width: 460px) {
-    .service__wave {
-        display: block;
-    }
-
-    .contact {
-        padding: 4.5rem 2rem;
-    }
-}
-
-@media screen and (max-width: 410px) {
-    .home__title {
-        font-size: 3rem;
-    }
-
-    .home__links-wrapper {
-        width: 100%;
-    }
-
-    .home__link {
-        width: 100%;
-    }
-
-    .home__photo {
-        width: 26rem;
-        height: 26rem;
-        border-width: 1rem;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .about__content{
-        padding: 0;
-    }
-    .about__content h4{
-        font-size: 1.5rem;
-    }
-}
-
-
-
-.home__photo {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                           upload the file styles                           */
-/* -------------------------------------------------------------------------- */
-        /* Optional: Add some styling to the editable h1 */
-        #editableH1{
-            text-transform: capitalize;
-        }
-
-        /* Style the input field */
-        input[type="text"] {
-            display: none;
-        }
-
-        /* Style the Save button */
-        #saveBtn {
-            display: none;
-            margin-top: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        #editIcon{
-            cursor: pointer;
-            font-size: 2rem;
-        }
-
-.upload,
-.about-text-upload{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 3rem;
-    border: .3rem dashed rgb(255, 217, 0);
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-    backdrop-filter: blur(1rem);
-    cursor: pointer;
-    box-shadow: 0 0 4rem -1rem rgba(255, 217, 0, .27);
-}
-.about-text-upload{
-    overflow: visible;
-}
-.upload h2{
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-size: 5rem;
-}
-
-#file {
-    transform: scale(100);
-    opacity: 0;
-
-}
-.about-upload{
-    display:none;
-}
-.about-title-icon{
-    border: .3rem dashed rgb(255, 217, 0);
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    border-radius: 1.4rem;
-
-}
-.about-title-input{
-    color:#95a5c6;
-    font-family: "Poppins SemiBold";
-    font-size: 2.4rem;
-    background:transparent;
-    border:none;
-    outline:none;
-}
-#saveBtn{
-    display: none;
-    width: 100%;
-    border: 0.3rem dashed rgb(255, 217, 0);
-    background: transparent;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-.about__content{
-    display: flex;
-    padding: 4rem;
-    align-items: baseline;
-    justify-content: start;
-    column-gap: 2rem;
-    flex-wrap: wrap;
-}
-    </style>
 </head>
 <body>
 
@@ -433,11 +23,11 @@
                 <li data-section="aboutus" class="menu__item">
                     <a href="#" class="menu__link">About us</a>
                 </li>
-                <li data-section="services" class="menu__item">
-                    <a href="#" class="menu__link">Services</a>
-                </li>
                 <li data-section="resume" class="menu__item">
                     <a href="#" class="menu__link">Resume</a>
+                </li>
+                <li data-section="services" class="menu__item">
+                    <a href="#" class="menu__link">Services</a>
                 </li>
                 <li data-section="portfolio" class="menu__item">
                     <a href="#" class="menu__link">Portfolio</a>
@@ -447,9 +37,6 @@
                 </li>
                 <li data-section="contactus" class="menu__item">
                     <a href="#" class="menu__link">Contact</a>
-                </li>
-                <li data-section="contactus" class="menu__item">
-                    <a href="logout.php" class="menu__link logout">logout</a>
                 </li>
             </ul>
             <div class="nav__toggle-icon">
@@ -464,7 +51,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-lg-7">
                     <div class="home__content">
-                        <h3 class="home__name">Hello, IM    <span>username</span></h3>
+                        <h3 class="home__name">Hello, IM <span>White Alexa</span></h3>
                         <h2 class="home__title">Creative Designer</h2>
                         <p class="home__caption">Freelancer Web/ Mobile UI/UX Designer with Motion Graphics</p>
                         <div class="home__links-wrapper">
@@ -474,14 +61,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <div class="home__photo">
-                    <div class="upload">
-                     <h2>📂</h2>
-                    <div>
-                        <input type="file" name="file" id="file" class="upload__input">
-                    </div>
-                      </div>
-                         </div>
+                    <div class="home__photo"></div>
                 </div>
             </div>
         </div>
@@ -495,23 +75,10 @@
             </div>
             <div class="about">
                 <div class="about__cover">
-                <div class="about-upload">
-                     <h2>📂</h2>
-                    <div>
-                        <input type="file" name="file" id="file" class="upload__input">
-                    </div>
-                      </div>
-                    <img src="../images/about-us-man.jpg" alt="about us" class="about__img">
+                    <img src="images/about-us-man.jpg" alt="about us" class="about__img">
                 </div>
                 <div class="about__content">
-                    <h4 class="about__title" id="editableH1">Why Choose me ?</h4>
-                    <h2  id="editIcon" onclick="startEditing()" class="about-title-icon" autofocus>✏️</h2>
-                    <input type="text" id="editInput" class="about-title-input">
-                    <button id="saveBtn" onclick="saveText()">Save</button>
-
-                    </div>
-                      </div>
-                </div>
+                    <h4 class="about__title">Why Choose me ?</h4>
                     <p class="about__description">Lorem ipsum, or lipsum as it is sometimes known, is dummy text
                         used in laying out print, graphic or web designs. The passage is
                         attributed to an unknown typesetter in the 15th century who is
@@ -550,17 +117,7 @@
                                   d="M614.281,2598.986a2.03,2.03,0,0,1,0-4.061h6.631l1.348-4.061h24.48l1.348,4.061h6.631a2.03,2.03,0,0,1,0,4.061Zm-8.222-12.182a6.086,6.086,0,0,1-6.066-6.091v-2.03h69.016v2.03a6.2,6.2,0,0,1-6.2,6.091Zm62.949-12.181H656.741v-6.091a2.028,2.028,0,0,0-2.021-2.03H651.6a18.2,18.2,0,0,0-.719-1.74l2.21-2.22a2.04,2.04,0,0,0,0-2.871l-5.719-5.742a2.015,2.015,0,0,0-2.859,0l-2.211,2.22a18.518,18.518,0,0,0-1.732-.724v-3.136a2.029,2.029,0,0,0-2.022-2.03h-8.087a2.028,2.028,0,0,0-2.022,2.03v3.136a18.5,18.5,0,0,0-1.732.724l-2.211-2.22a2.013,2.013,0,0,0-2.859,0l-5.719,5.742a2.04,2.04,0,0,0,0,2.871l2.21,2.22a18.325,18.325,0,0,0-.719,1.74h-3.124a2.029,2.029,0,0,0-2.022,2.03v6.091H599.992V2540.1a6.085,6.085,0,0,1,6.066-6.09h56.749a6.219,6.219,0,0,1,4.355,1.785,5.982,5.982,0,0,1,1.846,4.3v34.518h0ZM648.65,2548.23a6.07,6.07,0,1,0,6.07-6.09A6.087,6.087,0,0,0,648.65,2548.23Zm-4.307,26.391a10.113,10.113,0,1,0-19.687,0H616.3v-4.061H618.9a2.024,2.024,0,0,0,1.958-1.523,14.019,14.019,0,0,1,1.5-3.619,2.039,2.039,0,0,0-.311-2.467l-1.84-1.848,2.859-2.871,1.84,1.848a2.008,2.008,0,0,0,2.459.312,13.861,13.861,0,0,1,3.6-1.5,2.031,2.031,0,0,0,1.516-1.968v-2.6h4.044v2.6a2.032,2.032,0,0,0,1.516,1.968,13.854,13.854,0,0,1,3.6,1.5,2.007,2.007,0,0,0,2.459-.312l1.84-1.848,2.859,2.871-1.839,1.848a2.039,2.039,0,0,0-.311,2.467,13.984,13.984,0,0,1,1.5,3.619,2.026,2.026,0,0,0,1.959,1.523H652.7v4.061Zm-15.517,0a6.067,6.067,0,1,1,11.347,0Z"
                                   transform="translate(-599.992 -2534.013)" fill="#fff"/>
                         </svg>
-                        <div>
-
-                            <h4 class="service__title">Web Design</h4>
-                            <div class="upload">
-                         <h2>✏️</h2>
-                        <div>
-                            <input type="file" name="file" id="file" class="upload__input">
-                        </div>
-                          </div>
-                        </div>
-                        
+                        <h4 class="service__title">Web Design</h4>
                         <p class="service__caption">Lipsum as it is sometimes known
                             is dummy text used in laying out print,
                             graphic or web designs.</p>
@@ -903,25 +460,19 @@
                 <div class="swiper1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                        <div class="upload">
-                     <h2>📂</h2>
-                    <div>
-                        <input type="file" name="file" id="file" class="upload__input">
-                    </div>
-                      </div>
-                            <img src="../images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -931,16 +482,16 @@
                 <div class="swiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-3.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -950,16 +501,16 @@
                 <div class="swiper3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-1.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
+                            <img src="images/portfolio-2.jpg" class="portfolio-content__img" alt="Portfolio Image">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -1042,7 +593,7 @@
                                               transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
                                               stroke-width="1"/>
                                     </svg>
-                                    Business Develop 
+                                    Business Develop
                                 </li>
                             </ul>
                             <a href="#" class="app-btn app-btn--orange package__link">Choose Plan</a>
@@ -1119,10 +670,7 @@
                                     Business Develop
                                 </li>
                             </ul>
-                            /* -------------------------------------------------------------------------- */
-                            /*          click the btn and go the sale page and the card and other         */
-                            /* -------------------------------------------------------------------------- */
-                            <a href="#" class="app-btn app-btn--purple package__link">Choose Plan </a>
+                            <a href="#" class="app-btn app-btn--purple package__link">Choose Plan</a>
                         </div>
                     </div>
                 </div>
@@ -1237,15 +785,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
-            <div>
-            <div class="upload">
-                     <h2>✏️</h2>
-                    <div>
-                        <input type="file" name="file" id="file" class="upload__input">
-                    </div>
-                      </div>
-                <p class="footer__copy-right">© 2019 createuiux. All rights reserved.</p>
-            </div>
+            <p class="footer__copy-right">© 2019 createuiux. All rights reserved.</p>
             <div class="footer__socials">
                 <div class="change-theme">
                     <svg viewBox="0 0 24 24"><path d="M12.3,4.9c0.4-0.2,0.6-0.7,0.5-1.1S12.2,3,11.7,3C6.8,3.1,3,7.1,3,12c0,5,4,9,9,9c3.8,0,7.1-2.4,8.4-5.9c0.2-0.4,0-0.9-0.4-1.2c-0.4-0.3-0.9-0.2-1.2,0.1c-1,0.9-2.3,1.4-3.7,1.4c-3.1,0-5.7-2.5-5.7-5.7C9.4,7.8,10.5,5.9,12.3,4.9zM15.1,17.4c0.5,0,1,0,1.4-0.1C15.3,18.4,13.7,19,12,19c-3.9,0-7-3.1-7-7c0-2.5,1.4-4.8,3.5-6c-0.7,1.1-1,2.4-1,3.8C7.4,14,10.9,17.4,15.1,17.4z"/></svg>
@@ -1290,8 +830,9 @@
     </div>
 </footer>
 <div class="cover"></div>
-<script src="../js/app.js"></script>
-<script src="../js/swiper-bundle.min.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/swiper-bundle.min.js"></script>
 <script type="text/javascript">
     const swiperOptions = {
         pagination: {
@@ -1310,34 +851,6 @@
     const swiper1 = new Swiper('.swiper1', swiperOptions)
     const swiper2 = new Swiper('.swiper2', swiperOptions)
     const swiper3 = new Swiper('.swiper3', swiperOptions)
-</script>
-
-<script>
-            const editableH1 = document.getElementById('editableH1');
-        const editInput = document.getElementById('editInput');
-        const saveBtn = document.getElementById('saveBtn');
-        const editIcon = document.getElementById('editIcon');
-
-        function startEditing() {
-            editInput.value = editableH1.textContent;
-            editInput.style.display = 'block';
-            saveBtn.style.display = 'block';
-            editableH1.style.display = 'none';
-            editIcon.style.display = 'none';
-        }
-
-        function saveText() {
-            const updatedText = editInput.value;
-            // Handle saving the updated text (e.g., send to server or update database)
-            console.log('Updated text:', updatedText);
-            // For demonstration purposes, I'm just logging the updated text here.
-            // Replace this with your actual database-saving logic.
-            editableH1.textContent = updatedText; // Update the displayed h1 text
-            editInput.style.display = 'none'; // Hide the input field
-            saveBtn.style.display = 'none'; // Hide the Save button
-            editableH1.style.display = 'block'; // Show the h1 again
-            editIcon.style.display = 'flex'; // Show the h1 again
-        }
 </script>
 
 </body>

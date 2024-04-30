@@ -1,49 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editable H1</title>
+    <meta name="vspan\ewport" content="wspandth=devspance-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        /* Add any additional styling here */
+        body{
+            font-family: poppins;
+
+        }
+        .editable {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 34rem;  
+          
+
+        }
+
+        .editalbe__title {}
+
+        .editable__edit-icon,
+        .editable__transh-icon,
+        .color-back,
+        .editable__save-edited-text {
+            border: none;
+            outline: none;
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+            background-color: yellow;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .editable__edit-icon{
+            margin-left: 0;
+        }
+
+        .editable__trash-icon {}
+
+        .editable__color {
+            width: 20px;
+            height: 20px;
+            transform: scale(10);
+        }
+
+        .editable__edit-text {
+          
+        }
+
+        .editable__edit-text-input,
+        .editable__save-edited-text {
+            display: none;
+        }
+
+        .editable__edit-text-input{
+            font-size: 2em;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            font-family: poppins;
+            width: auto;
+            height: auto;
+        }
+        .editable__save-edited-text {
+            
+        }
+
+        .manage {}
+
+        .manage__add-editable {}
+
+        .manage__delete-all-editable,
+        .manage__add-editable
+        {
+            margin-bottom: 0.3rem;
+            border: none;
+            outline: none;
+            display: block;
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+            background-color: yellow;
+            margin-left: .3rem;
+            cursor: pointer;
+            transition: all 250ms ease-out;
+        }
+        .editable__save-edited-text{
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            html{
+                cursor: default;
+            }
+        }
+        html{
+
+        }
     </style>
 </head>
+
 <body>
-    <h1 id="editableH1">Hello, World!</h1>
-    <button id="editButton" onclick="editH1()">Edit</button>
-    <input type="color" id="colorPicker" onchange="changeTextColor()">
-    <button id="deleteButton" onclick="deleteH1()">Delete</button>
+
+    <div class="editable">
+        <h1 class="editalbe__title">this is the editable text</h1>
+        <div class="editable__edit-text">
+            <span class="editable__edit-icon">✏️</span>
+            <span class="editable__save-edited-text">💾</span>
+            <span class="editable__transh-icon">🗑️</span>
+            <div class="color-back">
+
+                <input  type="color" name="color" class="editable__color">
+            </div>
+            <input type="text" name="editedText" class="editable__edit-text-input">
+        </div>
+    </div>
+    <div class="manage">
+        <span class="manage__add-editable">➕</span>
+        <span class="manage__delete-all-editable">🗑️delete everything🗑️</span>
+    </div>
 
     <script>
-        // Initialize the editable H1 text
-        let h1Text = "Hello, World!";
-        const h1Element = document.getElementById("editableH1");
+// Get references to the relevant elements
+const editIcon = document.querySelector('.editable__edit-icon');
+const editTextInput = document.querySelector('.editable__edit-text-input');
+const saveEditedText = document.querySelector('.editable__save-edited-text');
+const trashIcon = document.querySelector('.editable__transh-icon');
+const title = document.querySelector('.editalbe__title');
+const colorPicker = document.querySelector('.editable__color');
+const addEditableButton = document.querySelector('.manage__add-editable');
+const deleteAllEditableButton = document.querySelector('.manage__delete-all-editable');
+const container = document.querySelector('.container'); // Replace with your actual container element
 
-        // Function to edit the H1 text
-        function editH1() {
-            const newText = prompt("Enter new text for H1:");
-            if (newText !== null) {
-                h1Text = newText;
-                h1Element.textContent = h1Text;
-            }
-        }
+// Event listener for clicking the edit icon
+editIcon.addEventListener('click', () => {
+    editTextInput.value = title.textContent; // Populate input with current title text
+    editTextInput.style.display = 'block'; // Show the input field
+    title.style.display = 'none'; // Hide the title
+    saveEditedText.style.display = 'block'; // Show the save icon
+});
 
-        // Function to change the text color
-        function changeTextColor() {
-            const color = document.getElementById("colorPicker").value;
-            h1Element.style.color = color;
-        }
+// Event listener for clicking the save icon
+saveEditedText.addEventListener('click', () => {
+    title.textContent = editTextInput.value; // Update title text with input value
+    editTextInput.style.display = 'none'; // Hide the input field
+    title.style.display = 'block'; // Show the updated title
+    saveEditedText.style.display = 'none'; // Hide the save icon
+});
 
-        // Function to delete the H1
-        function deleteH1() {
-            const confirmDelete = confirm("Are you sure you want to delete the H1?");
-            if (confirmDelete) {
-                h1Element.remove();
-                document.getElementById("editButton").remove();
-                document.getElementById("colorPicker").remove();
-                document.getElementById("deleteButton").remove();
-            }
-        }
+// Event listener for clicking the trash icon
+trashIcon.addEventListener('click', () => {
+    const editableDiv = document.querySelector('.editable');
+    editableDiv.remove(); // Remove the entire editable div
+});
+
+// Event listener for changing the title color
+colorPicker.addEventListener('input', () => {
+    title.style.color = colorPicker.value; // Set the title color based on color picker value
+});
+
+
+
+// Event listener for clicking the "manage__add-editable" item
+addEditableButton.addEventListener('click', () => {
+    const newEditableDiv = document.createElement('div');
+    newEditableDiv.classList.add('editable'); // Add necessary classes to the new div
+    // Customize the content of the new editable div as needed
+    newEditableDiv.innerHTML = `
+        <h1 class="editalbe__title">this is the editable text</h1>
+        <div class="editable__edit-text">
+            <span class="editable__edit-icon">✏️</span>
+            <span class="editable__transh-icon">🗑️</span>
+            <div class="color-back">
+                <input type="color" name="color" class="editable__color">
+            </div>
+        </div>
+    `;
+    container.appendChild(newEditableDiv); // Append the new div to the container
+});
+
+
+// Event listener for deleting all editable divs
+deleteAllEditableButton.addEventListener('click', () => {
+    const allEditables = document.querySelectorAll('.editable');
+    allEditables.forEach((editable) => {
+        editable.remove(); // Remove each editable div
+    });
+});
+
+
+
     </script>
 </body>
+
 </html>
