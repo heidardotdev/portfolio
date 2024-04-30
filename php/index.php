@@ -12,11 +12,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Website</title>
-    <link rel="icon" type="image/png" href="images/app-logo.png">
-    <link rel="stylesheet" href="../styles/app.css">
-    <link rel="stylesheet" href="../styles/responsive.css">
-    <link rel="stylesheet" href="../styles/swiper-bundle.min.css">
+    <link rel="icon" type="image/png" href="../images/app-logo.png">
+    <link rel="stylesheet" href="../app.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="../swiper-bundle.min.css">
+    <style>
+        @font-face {
+    font-family: "Poppins";
+    src: url(".../fonts/Poppins-Regular.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: "Poppins Medium";
+    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins SemiBold";
+    src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Black";
+    src: url("../fonts/Poppins-Black.ttf") format("truetype");
+}
+    </style>
 
 </head>
 
