@@ -299,6 +299,11 @@ body {
 .home__name span {
     color: #F57F17;
 }
+.home-title-manage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .home__title {
     font-family: "Poppins Bold";
