@@ -151,7 +151,7 @@ body {
 
 /*
 
- - Header -
+- Header -
 
 */
 
@@ -264,7 +264,7 @@ body {
 
 /*
 
- - Main -
+- Main -
 
 */
 
@@ -274,7 +274,7 @@ body {
 
 /*
 
- - Home Section -
+- Home Section -
 
 */
 
@@ -299,10 +299,83 @@ body {
 .home__name span {
     color: #F57F17;
 }
-.home-title-manage{
+
+.home-title-manage {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.title-color,.home-link-color,.home-btn-color {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    width: 5rem;
+    height: 5rem
+}
+
+.title-color::-webkit-color-swatch {
+    border-radius: 1rem;
+    border: none;
+    accent-color: #0abead;
+
+}
+
+.home-link-editor-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-caption-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caption-color::-webkit-color-swatch,
+.home-link-color::-webkit-color-swatch, 
+.home-btn-color::-webkit-color-swatch {
+
+    border-radius: 1rem;
+    border: none;
+}
+.home-photo-input-box{
+    width: 7rem;
+    height: 7rem;
+    border: dashed orange;
+    text-align: center;
+    margin-left: 2rem;
+    margin-bottom: -7rem;
+    font-size: 4rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: all ease-in-out 250ms;
+}
+.home__Phot-Input{
+    transform: scale(10);
+    opacity: 0;
+}
+.home__photo:hover .home-photo-input-box{
+    opacity: 1;
+    margin-bottom: 2rem;
+}
+.caption-color,
+.btn-color {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.manage-text {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
 }
 
 .home__title {
@@ -331,7 +404,7 @@ body {
     width: 50rem;
     height: 50rem;
     border-radius: 100%;
-    background-image: url("./images/header-avatar.jpg");
+    background-image: url("../images/header-avatar.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
@@ -346,7 +419,7 @@ body {
 
 /*
 
- - About us Section -
+- About us Section -
 
 */
 .aboutus {
@@ -432,7 +505,7 @@ body {
 
 /*
 
- - Services Section -
+- Services Section -
 
 */
 .services {
@@ -505,7 +578,7 @@ body {
 
 /*
 
- - Resume Section -
+- Resume Section -
 
 */
 
@@ -661,7 +734,7 @@ body {
 
 /*
 
- - Portfolio Section -
+- Portfolio Section -
 
 */
 
@@ -727,7 +800,7 @@ body {
 
 /*
 
- - Pricing Section -
+- Pricing Section -
 
 */
 .pricing {
@@ -820,7 +893,7 @@ body {
 
 /*
 
- - Contact us Section -
+- Contact us Section -
 
 */
 
@@ -909,7 +982,7 @@ body {
 
 /*
 
- - Footer -
+- Footer -
 
 */
 
