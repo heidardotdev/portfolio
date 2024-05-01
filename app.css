@@ -306,7 +306,7 @@ body {
     justify-content: space-between;
 }
 
-.title-color,.home-link-color,.home-btn-color {
+.title-color,.home-link-color,.home-btn-color,.home-name-color {
     background: transparent;
     border: none;
     outline: none;
@@ -336,10 +336,17 @@ body {
 
 .caption-color::-webkit-color-swatch,
 .home-link-color::-webkit-color-swatch, 
+.home-name-color::-webkit-color-swatch, 
 .home-btn-color::-webkit-color-swatch {
 
     border-radius: 1rem;
     border: none;
+}
+.home__name-box{
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+    flex-wrap: wrap;
 }
 .home-photo-input-box{
     width: 7rem;
