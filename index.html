@@ -415,38 +415,39 @@
 
                         </div>
                         <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                // Listen for a click on the home-photo-input-box
-                                document.querySelector('.home-photo-input-box').addEventListener('click', function () {
-                                    // Get the file input element
-                                    var fileInput = document.getElementById('homePhoto');
+document.addEventListener('DOMContentLoaded', function () {
+    // Listen for a click on the home-photo-input-box
+    document.querySelector('.home-photo-input-box').addEventListener('click', function (event) {
+        // Get the file input element
+        var fileInput = document.getElementById('homePhoto');
 
-                                    // Trigger the file input click only if no file is selected
-                                    if (!fileInput.value) {
-                                        fileInput.click();
-                                    }
-                                });
+        // Trigger the file input click only if the clicked element is not the file input itself
+        if (event.target !== fileInput && !fileInput.value) {
+            fileInput.click();
+        }
+    });
 
-                                // Listen for a change on the file input
-                                document.getElementById('homePhoto').addEventListener('change', function (event) {
-                                    // Check if a file was selected
-                                    if (event.target.files.length > 0) {
-                                        // Get the file path and set it as the background image of the home__photo
-                                        var file = event.target.files[0];
-                                        var reader = new FileReader();
+    // Listen for a change on the file input
+    document.getElementById('homePhoto').addEventListener('change', function (event) {
+        // Check if a file was selected
+        if (event.target.files.length > 0) {
+            // Get the file and set it as the background image of the home__photo
+            var file = event.target.files[0];
+            var reader = new FileReader();
 
-                                        reader.onloadend = function () {
-                                            document.querySelector('.home__photo').style.backgroundImage = 'url(' + reader.result + ')';
-                                        }
+            reader.onloadend = function () {
+                document.querySelector('.home__photo').style.backgroundImage = 'url(' + reader.result + ')';
+            }
 
-                                        if (file) {
-                                            reader.readAsDataURL(file);
-                                        } else {
-                                            document.querySelector('.home__photo').style.backgroundImage = '';
-                                        }
-                                    }
-                                });
-                            });
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                document.querySelector('.home__photo').style.backgroundImage = '';
+            }
+        }
+    });
+});
+
 
 
                         </script>
