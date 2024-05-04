@@ -86,8 +86,9 @@ ul {
 
 .section-head__caption {
     color: var(--text-color);
-    margin: .5rem 0 2rem 0;
+    margin: .5rem 0 5rem 0;
     letter-spacing: .25rem;
+    position: relative;
 }
 
 .section-head__line {
@@ -95,7 +96,7 @@ ul {
     width: 20rem;
     height: .2rem;
     background-color: var(--primary-color);
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     position: relative;
 }
 
@@ -173,11 +174,25 @@ body {
     padding: 1.5rem 0;
 }
 
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+
 .nav__logo {
     color: var(--primary-color);
     font-family: "Poppins Black";
     font-size: 6rem;
     margin: 0;
+}
+
+.nav__logo-img {
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
 }
 
 .menu {
@@ -300,13 +315,20 @@ body {
     color: #F57F17;
 }
 
-.home-title-manage {
+.home-title-manage,
+.home-caption-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
 }
 
-.title-color,.home-link-color,.home-btn-color,.home-name-color {
+.title-color,
+.home-link-color,
+.home-btn-color,
+.home-name-color {
     background: transparent;
     border: none;
     outline: none;
@@ -315,10 +337,10 @@ body {
     height: 5rem
 }
 
+
 .title-color::-webkit-color-swatch {
-    border-radius: 1rem;
+    border-radius: 100%;
     border: none;
-    accent-color: #0abead;
 
 }
 
@@ -328,27 +350,48 @@ body {
     align-items: center;
 }
 
-.home-caption-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .caption-color::-webkit-color-swatch,
-.home-link-color::-webkit-color-swatch, 
-.home-name-color::-webkit-color-swatch, 
+.home-link-color::-webkit-color-swatch,
+.home-name-color::-webkit-color-swatch {
+    border-radius: 100%;
+    border: none;
+}
+
 .home-btn-color::-webkit-color-swatch {
 
     border-radius: 1rem;
     border: none;
 }
-.home__name-box{
+
+.home__name-box {
     display: flex;
     justify-content: space-between;
     max-width: 60%;
     flex-wrap: wrap;
 }
-.home-photo-input-box{
+
+.logo-box:hover .navelogoinput-box {
+    opacity: 1;
+    margin-top: -.2rem;
+
+}
+
+input[type=file],
+input[type=color] {
+    cursor: pointer;
+}
+
+.navelogoinput-box {
+    width: 3rem;
+    height: 3rem;
+    border: dashed orange;
+    text-align: center;
+    position: absolute;
+}
+
+.home-photo-input-box,
+.navelogoinput-box {
     width: 7rem;
     height: 7rem;
     border: dashed orange;
@@ -361,14 +404,18 @@ body {
     opacity: 0;
     transition: all ease-in-out 250ms;
 }
-.home__Phot-Input{
+
+.home__Phot-Input,
+.nav__logo-input {
     transform: scale(10);
     opacity: 0;
 }
-.home__photo:hover .home-photo-input-box{
+
+.home__photo:hover .home-photo-input-box {
     opacity: 1;
     margin-bottom: 2rem;
 }
+
 .caption-color,
 .btn-color {
     background: transparent;
@@ -385,6 +432,13 @@ body {
     column-gap: 2rem;
 }
 
+.mange-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
 .home__title {
     font-family: "Poppins Bold";
     color: var(--primary-color);
@@ -393,9 +447,68 @@ body {
 
 }
 
+
+.del, .pen{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+.edit-text-box, 
+.caption-edit-text-box ,
+.title-edit-text-box, 
+.first-link-edit-text-box, 
+.second-link-edit-text-box {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+*input{
+cursor: pointer;
+}
+
+#nameText {
+    font-family: "Poppins SemiBold";
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#titleText {
+    font-family: "Poppins Bold";
+    color: var(--primary-color);
+    font-size: 5rem;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.home-title-manage {
+    display: flex;
+}
+
+.title-edit-text-box {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+#saveTitleText {
+    width: 7rem;
+}
+
+#saveNameText {}
+
 .home__caption {
     margin-top: 1rem;
-    margin-bottom: 3rem;
     opacity: 0.7;
 }
 
@@ -414,6 +527,7 @@ body {
     background-image: url("../images/header-avatar.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+    object-fit: cover;
     box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
     border: 2rem solid var(--section-bg-color);
     display: flex;
@@ -460,6 +574,37 @@ body {
     font-size: 2.4rem;
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+.section-head-manage {
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.section-head-caption-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-manage,
+.portfolio-manage,
+.pricing-manage,
+.contactus-manage {
+    margin-top: -6rem;
+}
+
+
+.section-head-manage-m {
+    left: 60%;
+    position: absolute;
+}
+
+.left {
+    align-items: start;
+    flex-direction: column;
+    display: flex;
 }
 
 .about__description {
@@ -732,10 +877,12 @@ body {
     font-family: "Poppins SemiBold";
     font-size: 1.6rem;
     margin: 1rem 0;
+    text-align: left;
 }
 
 .resume-content__description {
     margin: 0;
+    text-align: left;
 }
 
 
@@ -820,6 +967,36 @@ body {
 
 .package {
     box-shadow: 0 0 5rem rgba(96, 233, 255, 27%);
+    position: relative;
+}
+
+.bg-blur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    border: 4px dashed orange;
+    position: absolute;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.bg-blur::after,
+.bg-blur::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 5rem;
+    height: .5rem;
+    background-color: orange;
+    border-radius: 2rem;
+}
+
+.bg-blur::before {
+    transform: rotate(90deg);
 }
 
 .package__head {
@@ -851,6 +1028,8 @@ body {
 .package__body {
     padding: 3rem 0;
     background-color: var(--app-bg-color);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .package-options {
@@ -938,6 +1117,7 @@ body {
     max-width: 55rem;
     padding: 4.5rem;
     margin-left: auto;
+    border-radius: 2rem;
 }
 
 .contact__title {

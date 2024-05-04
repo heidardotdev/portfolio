@@ -41,17 +41,83 @@
 }
 
 @media screen and (max-width: 992px) {
-    html{
+
+
+    .manage-text,
+    .mange-text-box {
+        margin: 0 auto;
+        position: relative;
+    }
+    .absolut-edit{
+        position: absolute;
+        top: 5rem;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+    .home__name-box {
+        justify-content: center;
+    }
+
+    .home-title-manage {
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home__links-wrapper {
+        justify-content: center;
+    }
+
+
+    html {
         cursor: default;
     }
+
+    .resume-manage {
+        padding-top: 2rem;
+    }
+
+    .portfolio-manage {
+        margin-top: -6rem;
+    }
+
+    .pricing-manage {
+        margin-top: 2rem;
+    }
+
+
+    .section-head-manage-m {
+        left: 0;
+        right: 0;
+        margin-top: auto;
+        margin-bottom: -1rem;
+        position: absolute;
+    }
+
     .nav__logo {
         font-size: 5rem;
     }
-    .home-photo-input-box{
+
+    .navelogoinput-box {
+        opacity: 1;
+        margin-top: 0;
+        cursor: default;
+    }
+
+    .logo-box:hover .navelogoinput-box {
+        margin-top: 0;
+
+
+    }
+
+    .home-photo-input-box {
         opacity: 1;
         margin-bottom: 0;
     }
-    .home__photo:hover .home-photo-input-box{
+
+    .home__photo:hover .home-photo-input-box {
         margin-bottom: 0;
 
     }
@@ -143,12 +209,14 @@
     .contact {
         margin-right: auto;
     }
-    .upload{
+
+    .upload {
         width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
+        height: 6rem;
+        border-radius: 100%;
     }
-    .upload h2{
+
+    .upload h2 {
         font-size: 3rem;
     }
 }
@@ -292,11 +360,11 @@
 }
 
 @media screen and (max-width: 350px) {
-    .about__content{
+    .about__content {
         padding: 0;
     }
-    .about__content h4{
+
+    .about__content h4 {
         font-size: 1.5rem;
     }
 }
-
