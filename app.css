@@ -526,14 +526,14 @@ cursor: pointer;
     border-radius: 100%;
     background-image: url("../images/header-avatar.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
     object-fit: cover;
     box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
     border: 2rem solid var(--section-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: end;
-    
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 

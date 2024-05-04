@@ -91,3 +91,42 @@ menuItems.forEach(item => {
     })
 })
 
+
+
+
+
+document.getElementById('navLogo').addEventListener('change', function (event) {
+    var imgElement = document.querySelector('.nav__logo').nextElementSibling; // Reference to your <img> element
+
+    // Check if a file was selected
+    if (event.target.files.length > 0) {
+        // Get the file path and set it as the src of the image
+        var src = URL.createObjectURL(event.target.files[0]);
+        imgElement.src = src;
+
+        // Set the display of the image to inline-block
+        imgElement.style.display = 'inline-block';
+
+        // Clear the text of the nav__logo
+        document.querySelector('.nav__logo').textContent = '';
+    } else {
+        // If no file is selected, set the display of the image to none
+        imgElement.style.display = 'none';
+    }
+});
+document.getElementById('navLogo').addEventListener('change', function (event) {
+    // Check if a file was selected
+    if (event.target.files.length > 0) {
+        // Get the file path
+        var filePath = URL.createObjectURL(event.target.files[0]);
+
+        // Set the href attribute of the favicon link element
+        var linkElement = document.querySelector('link[rel="icon"]');
+        if (linkElement) {
+            linkElement.href = filePath;
+        }
+    }
+});
+
+
+
