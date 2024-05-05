@@ -183,43 +183,9 @@ document.getElementById('navLogo').addEventListener('change', function (event) {
 
 
 
-// // Selecting elements from the DOM
-// const titlePen = document.getElementById('titlePen');
-// const titleDel = document.getElementById('titleDel');
-// const saveTitleText = document.getElementById('saveTitleText');
-// const homeTitleColor = document.getElementById('titleColor');
-// const titleEditTextbox = document.querySelector('.title-edit-text-box');
-// const homeTitle = document.querySelector('.home__title');
-// const titleText = document.getElementById('titleText');
 
-// // Function to toggle the title edit text box display
-// function toggleTitleEditTextbox(displayStyle) {
-//     titleEditTextbox.style.display = displayStyle;
-// }
 
-// // Event listener for the title pen icon
-// titlePen.addEventListener('click', function () {
-//     toggleTitleEditTextbox('flex'); // Show the title edit text box
-//     titleText.value = homeTitle.textContent; // Pre-fill the input with the current title
-//     titleText.style.color = homeTitle.style.color; // Set the input text color to match the title
-// });
 
-// // Event listener for the save button
-// saveTitleText.addEventListener('click', function () {
-//     homeTitle.textContent = titleText.value; // Save the new title
-//     toggleTitleEditTextbox('none'); // Hide the title edit text box
-// });
-
-// // Event listener for the title delete icon
-// titleDel.addEventListener('click', function () {
-//     homeTitle.textContent = ''; // Delete the title
-//     toggleTitleEditTextbox('flex'); // Show the title edit text box for new input
-// });
-
-// // Event listener for the title color picker
-// homeTitleColor.addEventListener('input', function () {
-//     homeTitle.style.color = homeTitleColor.value; // Change the title color
-// });
 
 
 
@@ -437,5 +403,8 @@ document.querySelector('.home__photo').style.backgroundImage = '';
 }
 });
 });
+
+
+
 
 
