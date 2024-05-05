@@ -408,3 +408,8 @@ document.querySelector('.home__photo').style.backgroundImage = '';
 
 
 
+
+
+
+
+
