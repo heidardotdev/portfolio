@@ -95,44 +95,6 @@ menuItems.forEach(item => {
 
 
 
-                                // Selecting elements from the DOM
-                                const titlePen = document.getElementById('titlePen');
-                                const titleDel = document.getElementById('titleDel');
-                                const saveTitleText = document.getElementById('saveTitleText');
-                                const homeTitleColor = document.getElementById('titleColor');
-                                const titleEditTextbox = document.querySelector('.title-edit-text-box');
-                                const homeTitle = document.querySelector('.home__title');
-                                const titleText = document.getElementById('titleText');
-
-                                // Function to toggle the title edit text box display
-                                function toggleTitleEditTextbox(displayStyle) {
-                                    titleEditTextbox.style.display = displayStyle;
-                                }
-
-                                // Event listener for the title pen icon
-                                titlePen.addEventListener('click', function () {
-                                    toggleTitleEditTextbox('flex'); // Show the title edit text box
-                                    titleText.value = homeTitle.textContent; // Pre-fill the input with the current title
-                                    titleText.style.color = homeTitle.style.color; // Set the input text color to match the title
-                                });
-
-                                // Event listener for the save button
-                                saveTitleText.addEventListener('click', function () {
-                                    homeTitle.textContent = titleText.value; // Save the new title
-                                    toggleTitleEditTextbox('none'); // Hide the title edit text box
-                                });
-
-                                // Event listener for the title delete icon
-                                titleDel.addEventListener('click', function () {
-                                    homeTitle.textContent = ''; // Delete the title
-                                    toggleTitleEditTextbox('flex'); // Show the title edit text box for new input
-                                });
-
-                                // Event listener for the title color picker
-                                homeTitleColor.addEventListener('input', function () {
-                                    homeTitle.style.color = homeTitleColor.value; // Change the title color
-                                });
-
 
 
 
@@ -177,47 +139,7 @@ homeNameColor.addEventListener('input', function () {
     homeNameUsername.style.color = homeNameColor.value;
 });
 
- <script>
-                                // Selecting elements from the DOM
-                                const titlePen = document.getElementById('titlePen');
-                                const titleDel = document.getElementById('titleDel');
-                                const saveTitleText = document.getElementById('saveTitleText');
-                                const homeTitleColor = document.getElementById('titleColor');
-                                const titleEditTextbox = document.querySelector('.title-edit-text-box');
-                                const homeTitle = document.querySelector('.home__title');
-                                const titleText = document.getElementById('titleText');
 
-                                // Function to toggle the title edit text box display
-                                function toggleTitleEditTextbox(displayStyle) {
-                                    titleEditTextbox.style.display = displayStyle;
-                                }
-
-                                // Event listener for the title pen icon
-                                titlePen.addEventListener('click', function () {
-                                    toggleTitleEditTextbox('flex'); // Show the title edit text box
-                                    titleText.value = homeTitle.textContent; // Pre-fill the input with the current title
-                                    titleText.style.color = homeTitle.style.color; // Set the input text color to match the title
-                                });
-
-                                // Event listener for the save button
-                                saveTitleText.addEventListener('click', function () {
-                                    homeTitle.textContent = titleText.value; // Save the new title
-                                    toggleTitleEditTextbox('none'); // Hide the title edit text box
-                                });
-
-                                // Event listener for the title delete icon
-                                titleDel.addEventListener('click', function () {
-                                    homeTitle.textContent = ''; // Delete the title
-                                    toggleTitleEditTextbox('flex'); // Show the title edit text box for new input
-                                });
-
-                                // Event listener for the title color picker
-                                homeTitleColor.addEventListener('input', function () {
-                                    homeTitle.style.color = homeTitleColor.value; // Change the title color
-                                });
-
-
-                            </script>
 
 
 
@@ -258,5 +180,262 @@ document.getElementById('navLogo').addEventListener('change', function (event) {
     }
 });
 
+
+
+
+// // Selecting elements from the DOM
+// const titlePen = document.getElementById('titlePen');
+// const titleDel = document.getElementById('titleDel');
+// const saveTitleText = document.getElementById('saveTitleText');
+// const homeTitleColor = document.getElementById('titleColor');
+// const titleEditTextbox = document.querySelector('.title-edit-text-box');
+// const homeTitle = document.querySelector('.home__title');
+// const titleText = document.getElementById('titleText');
+
+// // Function to toggle the title edit text box display
+// function toggleTitleEditTextbox(displayStyle) {
+//     titleEditTextbox.style.display = displayStyle;
+// }
+
+// // Event listener for the title pen icon
+// titlePen.addEventListener('click', function () {
+//     toggleTitleEditTextbox('flex'); // Show the title edit text box
+//     titleText.value = homeTitle.textContent; // Pre-fill the input with the current title
+//     titleText.style.color = homeTitle.style.color; // Set the input text color to match the title
+// });
+
+// // Event listener for the save button
+// saveTitleText.addEventListener('click', function () {
+//     homeTitle.textContent = titleText.value; // Save the new title
+//     toggleTitleEditTextbox('none'); // Hide the title edit text box
+// });
+
+// // Event listener for the title delete icon
+// titleDel.addEventListener('click', function () {
+//     homeTitle.textContent = ''; // Delete the title
+//     toggleTitleEditTextbox('flex'); // Show the title edit text box for new input
+// });
+
+// // Event listener for the title color picker
+// homeTitleColor.addEventListener('input', function () {
+//     homeTitle.style.color = homeTitleColor.value; // Change the title color
+// });
+
+
+
+
+
+
+
+
+
+
+// Selecting elements from the DOM
+const titlePen = document.getElementById('titlePen');
+const titleDel = document.getElementById('titleDel');
+const saveTitleText = document.getElementById('saveTitleText');
+const homeTitleColor = document.getElementById('titleColor');
+const titleEditTextbox = document.querySelector('.title-edit-text-box');
+const homeTitle = document.querySelector('.home__title');
+const titleText = document.getElementById('titleText');
+
+// Function to toggle the title edit text box display
+function toggleTitleEditTextbox(displayStyle) {
+    titleEditTextbox.style.display = displayStyle;
+    homeTitle.style.display = displayStyle === 'flex' ? 'none' : 'block';
+}
+
+// Event listener for the title pen icon
+titlePen.addEventListener('click', function () {
+    toggleTitleEditTextbox('flex'); // Show the title edit text box
+    titleText.value = homeTitle.textContent; // Pre-fill the input with the current title
+    titleText.focus(); // Focus on the input field
+});
+
+// Event listener for the save button
+saveTitleText.addEventListener('click', function () {
+    homeTitle.textContent = titleText.value; // Save the new title
+    toggleTitleEditTextbox('none'); // Hide the title edit text box
+});
+
+// Event listener for the title delete icon
+titleDel.addEventListener('click', function () {
+    homeTitle.textContent = ''; // Delete the title
+    toggleTitleEditTextbox('flex'); // Show the title edit text box for new input
+    titleText.value = ''; // Clear the input field
+    titleText.focus(); // Focus on the input field
+});
+
+// Event listener for the title color picker
+homeTitleColor.addEventListener('input', function () {
+    homeTitle.style.color = homeTitleColor.value; // Change the title color
+});
+
+
+
+
+// Selecting elements from the DOM
+const captionPen = document.getElementById('captionPen');
+const captionDel = document.getElementById('captionDel');
+const saveCaptionText = document.getElementById('saveCaptionText');
+const homeCaptionColor = document.getElementById('captionColor');
+const captionEditTextbox = document.querySelector('.caption-edit-text-box');
+const homeCaption = document.querySelector('.home__caption');
+const captionText = document.getElementById('captionText');
+
+// Function to toggle the caption edit text box display
+function toggleCaptionEditTextbox(displayStyle) {
+    captionEditTextbox.style.display = displayStyle;
+}
+
+// Event listener for the caption pen icon
+captionPen.addEventListener('click', function () {
+    toggleCaptionEditTextbox('flex'); // Show the caption edit text box
+    captionText.value = homeCaption.textContent; // Pre-fill the input with the current caption
+    captionText.style.color = homeCaption.style.color; // Set the input text color to match the caption
+});
+
+// Event listener for the save button
+saveCaptionText.addEventListener('click', function () {
+    homeCaption.textContent = captionText.value; // Save the new caption
+    toggleCaptionEditTextbox('none'); // Hide the caption edit text box
+});
+
+// Event listener for the caption delete icon
+captionDel.addEventListener('click', function () {
+    homeCaption.textContent = ''; // Delete the caption
+    toggleCaptionEditTextbox('flex'); // Show the caption edit text box for new input
+});
+
+// Event listener for the caption color picker
+homeCaptionColor.addEventListener('input', function () {
+    homeCaption.style.color = homeCaptionColor.value; // Change the caption color
+});
+
+
+// Selecting elements from the DOM
+const firstLinkPen = document.getElementById('firstLinkPen');
+const firstLinkDel = document.getElementById('firstLinkDel');
+const saveFirstLinkText = document.getElementById('saveFirstLinkText');
+const firstLinkColor = document.getElementById('firstLinkColor');
+const firstLinkBgColor = document.getElementById('firstLinkBgColor');
+const firstLinkEditTextbox = document.querySelector('.first-link-edit-text-box');
+const homeFirstLink = document.querySelector('.home__first-link');
+const firstLinkText = document.getElementById('firstLinkText');
+
+// Function to toggle the first link edit text box display
+function toggleFirstLinkEditTextbox(displayStyle) {
+    firstLinkEditTextbox.style.display = displayStyle;
+}
+
+// Event listener for the first link pen icon
+firstLinkPen.addEventListener('click', function () {
+    toggleFirstLinkEditTextbox('flex'); // Show the first link edit text box
+    firstLinkText.value = homeFirstLink.textContent; // Pre-fill the input with the current link text
+    firstLinkText.style.color = homeFirstLink.style.color; // Set the input text color to match the link
+});
+
+// Event listener for the save button
+saveFirstLinkText.addEventListener('click', function () {
+    homeFirstLink.textContent = firstLinkText.value; // Save the new link text
+    toggleFirstLinkEditTextbox('none'); // Hide the first link edit text box
+});
+
+// Event listener for the first link delete icon
+firstLinkDel.addEventListener('click', function () {
+    homeFirstLink.textContent = ''; // Delete the link text
+    toggleFirstLinkEditTextbox('flex'); // Show the first link edit text box for new input
+});
+
+// Event listener for the first link color picker
+firstLinkColor.addEventListener('input', function () {
+    homeFirstLink.style.color = firstLinkColor.value; // Change the link text color
+});
+
+// Event listener for the first link background color picker
+firstLinkBgColor.addEventListener('input', function () {
+    homeFirstLink.style.backgroundColor = firstLinkBgColor.value; // Change the link background color
+    // Assuming you want to change the shadow color to match the background color
+    homeFirstLink.style.boxShadow = `0rem 1.5rem 4rem ${firstLinkBgColor.value}`; // Change the link shadow color
+});
+
+// Selecting elements from the DOM
+const secondLinkPen = document.getElementById('secondLinkPen');
+const secondLinkDel = document.getElementById('secondLinkDel');
+const saveSecondLinkText = document.getElementById('saveSecondLinkText');
+const secondLinkColor = document.getElementById('secondLinkColor');
+const secondLinkBgColor = document.getElementById('secondLinkBgColor');
+const secondLinkEditTextbox = document.querySelector('.second-link-edit-text-box');
+const homeSecondLink = document.querySelector('.home__second-link');
+const secondLinkText = document.getElementById('secondLinkText');
+
+// Function to toggle the second link edit text box display
+function toggleSecondLinkEditTextbox(displayStyle) {
+    secondLinkEditTextbox.style.display = displayStyle;
+}
+
+// Event listener for the second link pen icon
+secondLinkPen.addEventListener('click', function () {
+    toggleSecondLinkEditTextbox('flex'); // Show the second link edit text box
+    secondLinkText.value = homeSecondLink.textContent; // Pre-fill the input with the current link text
+    secondLinkText.style.color = homeSecondLink.style.color; // Set the input text color to match the link
+});
+
+// Event listener for the save button
+saveSecondLinkText.addEventListener('click', function () {
+    homeSecondLink.textContent = secondLinkText.value; // Save the new link text
+    toggleSecondLinkEditTextbox('none'); // Hide the second link edit text box
+});
+
+// Event listener for the second link delete icon
+secondLinkDel.addEventListener('click', function () {
+    homeSecondLink.textContent = ''; // Delete the link text
+    toggleSecondLinkEditTextbox('flex'); // Show the second link edit text box for new input
+});
+
+// Event listener for the second link color picker
+secondLinkColor.addEventListener('input', function () {
+    homeSecondLink.style.color = secondLinkColor.value; // Change the link text color
+});
+
+// Event listener for the second link background color picker
+secondLinkBgColor.addEventListener('input', function () {
+    homeSecondLink.style.backgroundColor = secondLinkBgColor.value; // Change the link background color
+    // Assuming you want to change the shadow color to match the background color
+    homeSecondLink.style.boxShadow = `0px 0px 10px ${secondLinkBgColor.value}`; // Change the link shadow color
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+// Listen for a click on the home-photo-input-box
+document.querySelector('.home-photo-input-box').addEventListener('click', function (event) {
+// Get the file input element
+var fileInput = document.getElementById('homePhoto');
+
+// Trigger the file input click only if the clicked element is not the file input itself
+if (event.target !== fileInput && !fileInput.value) {
+fileInput.click();
+}
+});
+
+// Listen for a change on the file input
+document.getElementById('homePhoto').addEventListener('change', function (event) {
+// Check if a file was selected
+if (event.target.files.length > 0) {
+// Get the file and set it as the background image of the home__photo
+var file = event.target.files[0];
+var reader = new FileReader();
+
+reader.onloadend = function () {
+document.querySelector('.home__photo').style.backgroundImage = 'url(' + reader.result + ')';
+}
+
+if (file) {
+reader.readAsDataURL(file);
+} else {
+document.querySelector('.home__photo').style.backgroundImage = '';
+}
+}
+});
+});
 
 
