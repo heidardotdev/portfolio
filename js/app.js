@@ -487,6 +487,85 @@ window.onload = function() {
 };
 
 
+/* -------------------------------------------------------------------------- */
+/*                            dynamic service part                            */
+/* -------------------------------------------------------------------------- */
+
+window.onload = function() {
+    // Function to toggle edit mode for Service Title
+    function toggleServiceTitleEditMode(editMode) {
+        const serviceTitle = document.querySelector('.serivece-title');
+        const editTextbox = document.querySelector('#serviceInput').parentNode;
+        const h3 = document.querySelector('h3.serivece-title');
+
+        if (editMode) {
+            h3.style.display = 'none';
+            editTextbox.style.display = 'block';
+            document.querySelector('#serviceInput').value = serviceTitle.textContent;
+        } else {
+            h3.style.display = 'block';
+            editTextbox.style.display = 'none';
+        }
+    }
+
+    // Function to toggle edit mode for Service Caption
+    function toggleServiceCaptionEditMode(editMode) {
+        const serviceCaption = document.querySelector('.services-caption');
+        const editTextbox = document.querySelector('#serviceCaptionInput').parentNode;
+        const p = document.querySelector('p.services-caption');
+
+        if (editMode) {
+            p.style.display = 'none';
+            editTextbox.style.display = 'block';
+            document.querySelector('#serviceCaptionInput').value = serviceCaption.textContent;
+        } else {
+            p.style.display = 'block';
+            editTextbox.style.display = 'none';
+        }
+    }
+
+    // Event listeners for Service Title
+    document.getElementById('servicePen').addEventListener('click', function() {
+        toggleServiceTitleEditMode(true);
+    });
+
+    document.getElementById('serviceDel').addEventListener('click', function() {
+        document.querySelector('.serivece-title').textContent = '';
+        toggleServiceTitleEditMode(true);
+    });
+
+    document.getElementById('saveServiceInput').addEventListener('click', function() {
+        const inputText = document.querySelector('#serviceInput').value;
+        document.querySelector('.serivece-title').textContent = inputText;
+        toggleServiceTitleEditMode(false);
+    });
+
+    document.getElementById('serviceColor').addEventListener('input', function() {
+        const newColor = this.value;
+        document.querySelector('.serivece-title').style.color = newColor;
+    });
+
+    // Event listeners for Service Caption
+    document.getElementById('serviceCaptionPen').addEventListener('click', function() {
+        toggleServiceCaptionEditMode(true);
+    });
+
+    document.getElementById('serviceCaptionDel').addEventListener('click', function() {
+        document.querySelector('.services-caption').textContent = '';
+        toggleServiceCaptionEditMode(true);
+    });
+
+    document.getElementById('saveServiceCaption').addEventListener('click', function() {
+        const inputText = document.querySelector('#serviceCaptionInput').value;
+        document.querySelector('.services-caption').textContent = inputText;
+        toggleServiceCaptionEditMode(false);
+    });
+
+    document.getElementById('serviceCaptionColor').addEventListener('input', function() {
+        const newColor = this.value;
+        document.querySelector('.services-caption').style.color = newColor;
+    });
+};
 
 
 
