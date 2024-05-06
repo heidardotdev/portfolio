@@ -407,8 +407,87 @@ document.querySelector('.home__photo').style.backgroundImage = '';
 
 
 /* -------------------------------------------------------------------------- */
-/*                              this is a comment                             */
+/*                      about us title and caption script                     */
 /* -------------------------------------------------------------------------- */
+
+window.onload = function() {
+    // Function to toggle edit mode for About Us Title
+    function toggleAboutUsTitleEditMode(editMode) {
+        const aboutUsText = document.querySelector('.about-us-text');
+        const editTextbox = document.querySelector('#aboutUsInput').parentNode;
+        const h3 = document.querySelector('h3.about-us-text');
+
+        if (editMode) {
+            h3.style.display = 'none';
+            editTextbox.style.display = 'block';
+            document.querySelector('#aboutUsInput').value = aboutUsText.textContent;
+        } else {
+            h3.style.display = 'block';
+            editTextbox.style.display = 'none';
+        }
+    }
+
+    // Function to toggle edit mode for About Us Caption
+    function toggleAboutUsCaptionEditMode(editMode) {
+        const aboutUsCaption = document.querySelector('.about-us-caption');
+        const editTextbox = document.querySelector('#aboutUsCaptionInput').parentNode;
+        const p = document.querySelector('p.about-us-caption');
+
+        if (editMode) {
+            p.style.display = 'none';
+            editTextbox.style.display = 'block';
+            document.querySelector('#aboutUsCaptionInput').value = aboutUsCaption.textContent;
+        } else {
+            p.style.display = 'block';
+            editTextbox.style.display = 'none';
+        }
+    }
+
+    // Event listeners for About Us Title
+    document.getElementById('aboutUsTitlePen').addEventListener('click', function() {
+        toggleAboutUsTitleEditMode(true);
+    });
+
+    document.getElementById('aboutUsTitleDel').addEventListener('click', function() {
+        document.querySelector('.about-us-text').textContent = '';
+        toggleAboutUsTitleEditMode(true);
+    });
+
+    document.getElementById('saveAboutUsText').addEventListener('click', function() {
+        const inputText = document.querySelector('#aboutUsInput').value;
+        document.querySelector('.about-us-text').textContent = inputText;
+        toggleAboutUsTitleEditMode(false);
+    });
+
+    document.getElementById('aboutUsTitleColor').addEventListener('input', function() {
+        const newColor = this.value;
+        document.querySelector('.about-us-text').style.color = newColor;
+    });
+
+    // Event listeners for About Us Caption
+    document.getElementById('aboutUsCaptionPen').addEventListener('click', function() {
+        toggleAboutUsCaptionEditMode(true);
+    });
+
+    document.getElementById('aboutUsCaptiondel').addEventListener('click', function() {
+        document.querySelector('.about-us-caption').textContent = '';
+        toggleAboutUsCaptionEditMode(true);
+    });
+
+    document.getElementById('saveaboutUsCaption').addEventListener('click', function() {
+        const inputText = document.querySelector('#aboutUsCaptionInput').value;
+        document.querySelector('.about-us-caption').textContent = inputText;
+        toggleAboutUsCaptionEditMode(false);
+    });
+
+    document.getElementById('aboutUsCaptionColor').addEventListener('input', function() {
+        const newColor = this.value;
+        document.querySelector('.about-us-caption').style.color = newColor;
+    });
+};
+
+
+
 
 
 
