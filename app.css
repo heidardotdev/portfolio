@@ -449,7 +449,8 @@ input[type=color] {
 }
 
 
-.del, .pen{
+.del,
+.pen {
     background-color: #fff;
     padding: 1rem;
     border-radius: 1rem;
@@ -457,17 +458,18 @@ input[type=color] {
 }
 
 
-.edit-text-box, 
-.caption-edit-text-box ,
-.title-edit-text-box, 
-.first-link-edit-text-box, 
+.edit-text-box,
+.caption-edit-text-box,
+.title-edit-text-box,
+.first-link-edit-text-box,
 .second-link-edit-text-box {
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
 }
-*input{
-cursor: pointer;
+
+*input {
+    cursor: pointer;
 }
 
 #nameText {
@@ -547,13 +549,14 @@ cursor: pointer;
 
 */
 
-.aboutus-manage-text{
+.aboutus-manage-text {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0;
     padding-top: 3rem;
 }
+
 .aboutus {
     margin-top: 6rem;
 }
@@ -971,6 +974,19 @@ cursor: pointer;
 - Pricing Section -
 
 */
+#package-container {
+    max-width: 1250px;
+    overflow: hidden;
+    display: flex;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.new-package {
+    max-width: 386.66px;
+    margin-bottom: 3rem;
+}
+
 .pricing {
     margin-top: 8rem;
     box-shadow: 0 0 6rem rgb(19 182 255 / 24%);

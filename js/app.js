@@ -387,92 +387,111 @@ document.addEventListener("DOMContentLoaded", function () {
 /* -------------------------------------------------------------------------- */
 /*                      about us title and caption script                     */
 /* -------------------------------------------------------------------------- */
-window.onload = function() {
-    // Function to update the menu link text based on the about-us-text
-    function updateMenuLinkText() {
-        const aboutUsTextContent = document.querySelector('.about-us-text').textContent;
-        const aboutUsMenuLink = document.querySelector('.about-us-menu-link');
-        if (aboutUsMenuLink) {
-            aboutUsMenuLink.textContent = aboutUsTextContent;
-        }
+window.onload = function () {
+  // Function to update the menu link text based on the about-us-text
+  function updateMenuLinkText() {
+    const aboutUsTextContent =
+      document.querySelector(".about-us-text").textContent;
+    const aboutUsMenuLink = document.querySelector(".about-us-menu-link");
+    if (aboutUsMenuLink) {
+      aboutUsMenuLink.textContent = aboutUsTextContent;
     }
+  }
 
-    // Function to toggle edit mode for About Us Title
-    function toggleAboutUsTitleEditMode(editMode) {
-        const aboutUsText = document.querySelector('.about-us-text');
-        const editTextbox = document.querySelector('#aboutUsInput').parentNode;
-        const h3 = document.querySelector('h3.about-us-text');
+  // Function to toggle edit mode for About Us Title
+  function toggleAboutUsTitleEditMode(editMode) {
+    const aboutUsText = document.querySelector(".about-us-text");
+    const editTextbox = document.querySelector("#aboutUsInput").parentNode;
+    const h3 = document.querySelector("h3.about-us-text");
 
-        if (editMode) {
-            h3.style.display = 'none';
-            editTextbox.style.display = 'block';
-            document.querySelector('#aboutUsInput').value = aboutUsText.textContent;
-        } else {
-            h3.style.display = 'block';
-            editTextbox.style.display = 'none';
-        }
+    if (editMode) {
+      h3.style.display = "none";
+      editTextbox.style.display = "block";
+      document.querySelector("#aboutUsInput").value = aboutUsText.textContent;
+    } else {
+      h3.style.display = "block";
+      editTextbox.style.display = "none";
     }
+  }
 
-    // Function to toggle edit mode for About Us Caption
-    function toggleAboutUsCaptionEditMode(editMode) {
-        const aboutUsCaption = document.querySelector('.about-us-caption');
-        const editTextbox = document.querySelector('#aboutUsCaptionInput').parentNode;
-        const p = document.querySelector('p.about-us-caption');
+  // Function to toggle edit mode for About Us Caption
+  function toggleAboutUsCaptionEditMode(editMode) {
+    const aboutUsCaption = document.querySelector(".about-us-caption");
+    const editTextbox = document.querySelector(
+      "#aboutUsCaptionInput"
+    ).parentNode;
+    const p = document.querySelector("p.about-us-caption");
 
-        if (editMode) {
-            p.style.display = 'none';
-            editTextbox.style.display = 'block';
-            document.querySelector('#aboutUsCaptionInput').value = aboutUsCaption.textContent;
-        } else {
-            p.style.display = 'block';
-            editTextbox.style.display = 'none';
-        }
+    if (editMode) {
+      p.style.display = "none";
+      editTextbox.style.display = "block";
+      document.querySelector("#aboutUsCaptionInput").value =
+        aboutUsCaption.textContent;
+    } else {
+      p.style.display = "block";
+      editTextbox.style.display = "none";
     }
+  }
 
-    // Event listeners for About Us Title
-    document.getElementById('aboutUsTitlePen').addEventListener('click', function() {
-        toggleAboutUsTitleEditMode(true);
+  // Event listeners for About Us Title
+  document
+    .getElementById("aboutUsTitlePen")
+    .addEventListener("click", function () {
+      toggleAboutUsTitleEditMode(true);
     });
 
-    document.getElementById('aboutUsTitleDel').addEventListener('click', function() {
-        document.querySelector('.about-us-text').textContent = '';
-        toggleAboutUsTitleEditMode(true);
+  document
+    .getElementById("aboutUsTitleDel")
+    .addEventListener("click", function () {
+      document.querySelector(".about-us-text").textContent = "";
+      toggleAboutUsTitleEditMode(true);
     });
 
-    document.getElementById('saveAboutUsText').addEventListener('click', function() {
-        const inputText = document.querySelector('#aboutUsInput').value;
-        document.querySelector('.about-us-text').textContent = inputText;
-        updateMenuLinkText(); // Update the menu link text
-        toggleAboutUsTitleEditMode(false);
+  document
+    .getElementById("saveAboutUsText")
+    .addEventListener("click", function () {
+      const inputText = document.querySelector("#aboutUsInput").value;
+      document.querySelector(".about-us-text").textContent = inputText;
+      updateMenuLinkText(); // Update the menu link text
+      toggleAboutUsTitleEditMode(false);
     });
 
-    document.getElementById('aboutUsTitleColor').addEventListener('input', function() {
-        const newColor = this.value;
-        document.querySelector('.about-us-text').style.color = newColor;
+  document
+    .getElementById("aboutUsTitleColor")
+    .addEventListener("input", function () {
+      const newColor = this.value;
+      document.querySelector(".about-us-text").style.color = newColor;
     });
 
-    // Event listeners for About Us Caption
-    document.getElementById('aboutUsCaptionPen').addEventListener('click', function() {
-        toggleAboutUsCaptionEditMode(true);
+  // Event listeners for About Us Caption
+  document
+    .getElementById("aboutUsCaptionPen")
+    .addEventListener("click", function () {
+      toggleAboutUsCaptionEditMode(true);
     });
 
-    document.getElementById('aboutUsCaptiondel').addEventListener('click', function() {
-        document.querySelector('.about-us-caption').textContent = '';
-        toggleAboutUsCaptionEditMode(true);
+  document
+    .getElementById("aboutUsCaptiondel")
+    .addEventListener("click", function () {
+      document.querySelector(".about-us-caption").textContent = "";
+      toggleAboutUsCaptionEditMode(true);
     });
 
-    document.getElementById('saveaboutUsCaption').addEventListener('click', function() {
-        const inputText = document.querySelector('#aboutUsCaptionInput').value;
-        document.querySelector('.about-us-caption').textContent = inputText;
-        toggleAboutUsCaptionEditMode(false);
+  document
+    .getElementById("saveaboutUsCaption")
+    .addEventListener("click", function () {
+      const inputText = document.querySelector("#aboutUsCaptionInput").value;
+      document.querySelector(".about-us-caption").textContent = inputText;
+      toggleAboutUsCaptionEditMode(false);
     });
 
-    document.getElementById('aboutUsCaptionColor').addEventListener('input', function() {
-        const newColor = this.value;
-        document.querySelector('.about-us-caption').style.color = newColor;
+  document
+    .getElementById("aboutUsCaptionColor")
+    .addEventListener("input", function () {
+      const newColor = this.value;
+      document.querySelector(".about-us-caption").style.color = newColor;
     });
 };
-
 
 /* -------------------------------------------------------------------------- */
 /*                            dynamic service part                            */
@@ -481,3 +500,98 @@ window.onload = function() {
 /* -------------------------------------------------------------------------- */
 /*                           dynamic resume using js                          */
 /* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 add packeg                                 */
+/* -------------------------------------------------------------------------- */
+
+// Select the plus icon
+const plusIcon = document.querySelector('.plus-icon');
+
+// Add click event listener to the plus icon
+plusIcon.addEventListener('click', function () {
+    // Define the HTML for the new package
+    const newPackageHTML = `
+  <div class="col-12 col-sm-6 col-lg-4 new-package">
+                      <div class="package">
+                          <div class="package__head package__head--pink">
+                              <h4 class="package__type">Premium</h4>
+                              <span class="package__price">$150</span>
+                              <span class="package__filter">Only PSD Design</span>
+                          </div>
+                          <div class="package__body">
+                              <ul class="package-options">
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      Graphic Desing
+                                  </li>
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      Web Design
+                                  </li>
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      UI/UX Design
+                                  </li>
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      HTML & CSS
+                                  </li>
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      SEO Optimize
+                                  </li>
+                                  <li class="package-options__item">
+                                      <svg class="package-options__icon" width="14.058" height="11.773"
+                                          viewBox="0 0 14.058 11.773">
+                                          <path id="Icon_material-done" data-name="Icon material-done"
+                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                              stroke-width="1" />
+                                      </svg>
+                                      Business Develop
+                                  </li>
+                              </ul>
+                              <a href="#" class="app-btn app-btn--pink package__link">Choose Plan</a>
+                          </div>
+                      </div>
+                  </div>
+  `;
+
+    // Select the container where the new package will be added
+    const container = document.getElementById('package-container');
+
+    // Append the new package to the container
+    container.insertAdjacentHTML('beforeend', newPackageHTML);
+});
+
