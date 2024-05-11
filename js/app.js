@@ -506,12 +506,12 @@ window.onload = function () {
 /* -------------------------------------------------------------------------- */
 
 // Select the plus icon
-const plusIcon = document.querySelector('.plus-icon');
+const plusIcon = document.querySelector(".plus-icon");
 
 // Add click event listener to the plus icon
-plusIcon.addEventListener('click', function () {
-    // Define the HTML for the new package
-    const newPackageHTML = `
+plusIcon.addEventListener("click", function () {
+  // Define the HTML for the new package
+  const newPackageHTML = `
   <div class="col-12 col-sm-6 col-lg-4 new-package">
                       <div class="package">
                           <div class="package__head package__head--pink">
@@ -588,10 +588,9 @@ plusIcon.addEventListener('click', function () {
                   </div>
   `;
 
-    // Select the container where the new package will be added
-    const container = document.getElementById('package-container');
+  // Select the container where the new package will be added
+  const container = document.getElementById("package-container");
 
-    // Append the new package to the container
-    container.insertAdjacentHTML('beforeend', newPackageHTML);
+  // Append the new package to the container
+  container.insertAdjacentHTML("beforeend", newPackageHTML);
 });
-
