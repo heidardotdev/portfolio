@@ -512,80 +512,88 @@ const plusIcon = document.querySelector(".plus-icon");
 plusIcon.addEventListener("click", function () {
   // Define the HTML for the new package
   const newPackageHTML = `
-  <div class="col-12 col-sm-6 col-lg-4 new-package">
-                      <div class="package">
-                          <div class="package__head package__head--pink">
-                              <h4 class="package__type">Premium</h4>
-                              <span class="package__price">$150</span>
-                              <span class="package__filter">Only PSD Design</span>
-                          </div>
-                          <div class="package__body">
-                              <ul class="package-options">
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
+    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="package" id="removePack">
+                            <div id="deletPackBtn" class="package__head package__head--orange" style="position: relative;" >
+                                <button onclick="removeElement()" style="background-color: transparent; border: none;outline: none;">
+
+                                    <svg style="position: absolute;top:-3rem;right:-3rem; color:rgb(228, 228, 228);" width="7rem" height="7rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                       </svg>
-                                      Graphic Desing
-                                  </li>
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
-                                      </svg>
-                                      Web Design
-                                  </li>
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
-                                      </svg>
-                                      UI/UX Design
-                                  </li>
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
-                                      </svg>
-                                      HTML & CSS
-                                  </li>
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
-                                      </svg>
-                                      SEO Optimize
-                                  </li>
-                                  <li class="package-options__item">
-                                      <svg class="package-options__icon" width="14.058" height="11.773"
-                                          viewBox="0 0 14.058 11.773">
-                                          <path id="Icon_material-done" data-name="Icon material-done"
-                                              d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
-                                              transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
-                                              stroke-width="1" />
-                                      </svg>
-                                      Business Develop
-                                  </li>
-                              </ul>
-                              <a href="#" class="app-btn app-btn--pink package__link">Choose Plan</a>
-                          </div>
-                      </div>
-                  </div>
+                                </button>
+                           
+                                      
+                                <h4 class="package__type">Basic</h4>
+                                <span class="package__price">$70</span>
+                                <span class="package__filter">Only PSD Design</span>
+                            </div>
+                            <div class="package__body">
+                                <ul class="package-options">
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        Graphic Desing
+                                    </li>
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        Web Design
+                                    </li>
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        UI/UX Design
+                                    </li>
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        HTML & CSS
+                                    </li>
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        SEO Optimize
+                                    </li>
+                                    <li class="package-options__item">
+                                        <svg class="package-options__icon" width="14.058" height="11.773"
+                                            viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done"
+                                                d="M1355.037,6029.945l-3.028-3.231-1.009,1.077,4.037,4.309,8.651-9.233-1.009-1.077Z"
+                                                transform="translate(-1350.315 -6021.058)" fill="#333" stroke="#333"
+                                                stroke-width="1" />
+                                        </svg>
+                                        Business Develop
+                                    </li>
+                                </ul>
+                                <a href="#" class="app-btn app-btn--orange package__link">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
   `;
 
   // Select the container where the new package will be added
@@ -594,3 +602,27 @@ plusIcon.addEventListener("click", function () {
   // Append the new package to the container
   container.insertAdjacentHTML("beforeend", newPackageHTML);
 });
+
+/* -------------------------------------------------------------------------- */
+/*                                 remove pack                                */
+/* -------------------------------------------------------------------------- */
+// This function will be called when the delete button is clicked
+function removeElement(event) {
+  // Prevent the default action of the button
+  event.preventDefault();
+  
+  // 'event.target' refers to the clicked button. 
+  // The 'closest' method is used to find the nearest ancestor with the class 'package'
+  var packageElement = event.target.closest('.package');
+  
+  // Remove the found package element from the DOM
+  if (packageElement) {
+    packageElement.remove();
+  }
+}
+
+// Attach the 'removeElement' function to the click event of all delete buttons
+document.querySelectorAll('#deletPackBtn').forEach(function(button) {
+  button.onclick = removeElement;
+});
+
