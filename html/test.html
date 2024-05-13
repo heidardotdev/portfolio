@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Element Example</title>
+</head>
+<body>
+
+<!-- Container for the elements -->
+<div id="elements-container">
+  <!-- Example element with a remove button -->
+  <div class="package" id="removePack1" style="background-color: blueviolet;">
+    <p>Content of the package</p>
+    <button class="remove" data-target-id="removePack1">Remove</button>
+  </div>
+  <div class="package" style="background-color: gray;" id="removePack1">
+    <p>Content of the package</p>
+    <button class="remove" data-target-id="removePack1">Remove</button>
+  </div>
+  <div class="package" style="background-color: blue;" id="removePack1">
+    <p>Content of the package</p>
+    <button class="remove" data-target-id="removePack1">Remove</button>
+  </div>
+  <div class="package" style="background-color: red;" id="removePack1">
+    <p>Content of the package</p>
+    <button class="remove" data-target-id="removePack1">Remove</button>
+  </div>
+  <!-- Repeat the structure for more elements as needed -->
+</div>
+
+<script>
+// Function to remove an element with a specific ID
+function removeElementById(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+    element.remove();
+  }
+}
+
+// Add click event listener to the container
+document.getElementById('elements-container').addEventListener('click', function(event) {
+  // Check if the clicked element is a remove button
+  if (event.target.classList.contains('remove')) {
+    // Get the target ID from the data attribute
+    var targetId = event.target.getAttribute('data-target-id');
+    // Call the function to remove the element
+    removeElementById(targetId);
+  }
+});
+</script>
+
+</body>
+</html>
