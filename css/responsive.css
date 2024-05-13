@@ -51,6 +51,13 @@
         background-position-y: center;
         background-size: cover;
     }
+    .manage-text{
+        flex-direction: column;
+    }
+    #titleText{
+        overflow-x: hidden;
+    }
+    
 
     .manage-text,
     .mange-text-box {
