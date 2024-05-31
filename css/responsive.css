@@ -52,12 +52,16 @@
         background-size: cover;
     }
     .manage-text{
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
     }
     #titleText{
         overflow-x: hidden;
     }
-    
+    .home-title-manage .manage-text{
+        flex-direction: column;
+        overflow: hidden;
+    }
 
     .manage-text,
     .mange-text-box {
