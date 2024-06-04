@@ -21,7 +21,7 @@
 <body>
     <form action="#" method="post">
         <input type="text" name="username" placeholder="username" class="username">
-        <input type="password" placeholder="password" name="username">
+        <input type="password" placeholder="password" name="password">
         <input type="button" value="login">
         <input type="button" value="signup">
     </form>

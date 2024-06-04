@@ -21,7 +21,9 @@
 <body>
     <form action="#" method="post">
         <input type="text" name="username" placeholder="username" class="username">
-        <input type="password" placeholder="password" name="username">
+        <input type="text" name="email" placeholder="email" class="email">
+        <input type="password" placeholder="password" name="password">
+        <input type="file" placeholder="select the image" name="image">
         <input type="button" value="signup">
         <input type="button" value="login">
     </form>
