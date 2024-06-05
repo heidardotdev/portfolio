@@ -99,7 +99,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 40rem;
+    max-width: 55rem;
     width: 100%;
 }
 .wrapper__text{
