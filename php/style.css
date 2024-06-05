@@ -115,9 +115,11 @@ input:not(input[type=file]){
     border-right: none;
     border-left: none;
     outline: none;
+    color: #0ABEAD;
 
 }
-.wrapper{
+.wrapper__file{
+    width: 55rem;
 }
 
 
