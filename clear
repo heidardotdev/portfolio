@@ -1,0 +1,94 @@
+[33md6c48ef[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m style: add text color to the input
+[33m625d765[m refactore: add wrapper__file class
+[33mc2104a9[m feat: add favicon
+[33m5a01426[m feat: add favicon
+[33mea23407[m feat: add favicon
+[33m3c7779a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m feat: detele the camera icon
+[33m2d030ac[m feat: add camera icon
+[33m04b191f[m update
+[33mb95ddad[m feat: remove the eye icon element
+[33m700dc8b[m style: add input type exseption to the inputs
+[33ma2779cc[m fix: fix the size bug of the signup__box element
+[33ma9dd9dc[m style: coding the style of the inputs"
+[33mf78da67[m style: coding the style of the wrapper__text
+[33mf06984e[m style: coding the style of the signup__box
+[33m7dd15b4[m feat: coding signup__box and insert the left and right side into that
+[33m18be35a[m style: add capitalize text transform to the body style
+[33m61e3885[m style: remove the style of the body
+[33ma208445[m style: add poppins font family to body
+[33mb5fae3d[m style: add flex direction to the body
+[33m73d1899[m fix: fixing the bug of html code
+[33ma84fe3f[m style: coding singup title style
+[33m2a35043[m style: coding the style of form
+[33mb64283e[m refactor: add class name to the signup form to be semantic
+[33m959ebc3[m style: conding alignment of the body
+[33m825d487[m refactore: change the class name to be semantic(bem)
+[33m5ff40f5[m refactore: change the class name of wrapper text to be semantic(bem)
+[33m2ae1b42[m refactore: delete the input class
+[33mc010b21[m refactore: change the class name of wrapper text to be semantic(bem)
+[33mb944926[m refactore: change the btn calss name
+[33me91d3f8[m feat: add login button
+[33mc33983b[m feat: add login question
+[33m93fa924[m feat: add placeholder to password input
+[33ma057c81[m feat: add placeholder to email input
+[33mee142d9[m feat: add password wrapper to the login file
+[33m5941ad5[m feat: add inter the email wrapper to the login file
+[33mcde99aa[m feat: add form to the login file
+[33m7eb9a08[m refactore: change the title of the login file
+[33mfa03d07[m refactore: remove the class of body of index.html
+[33me056fcd[m feat: add eye icon to the sign up pass
+[33md400dd6[m feat: coding signup register btn
+[33m3953709[m feat: coding signup question
+[33md5d8eb7[m feat: coding select image input
+[33m1632ce8[m feat: develop title, error, left and right sides of the signup.html file
+[33m377792f[m style: reduce the time of logout transition
+[33me03f865[m docs: add css file to the php folder
+[33m12c2f42[m style: remove the style
+[33m36e4715[m feat: remove the form code block to coding again
+[33m5700823[m docs: rename the file to the html to begain coding from zero
+[33mc665777[m refactor: remove php code to rewrite that
+[33mb02819d[m docs: signup.php
+[33mc01988e[m feat: coding config.php
+[33m4fe2e3a[m refactor: refactor index.html file delete additional comments
+[33md87e077[m[33m ([m[1;31morigin/refactore-style[m[33m)[m style: fix responsive style of manage text item in the project
+[33m75b8c74[m docs: add test.html file
+[33m915a432[m feat: develop remove defult pack
+[33m0b0aa02[m style: improve the responsive style of home section title and caption
+[33mfae96e4[m update
+[33m2f20653[m feat: add new package
+[33m9cf81ec[m update
+[33m32859cb[m feat: complete dynamic services part using js coding #1
+[33mae488fb[m complete home part of the project #2
+[33m0165c66[m update #3
+[33m5f78801[m feat: create editable about us
+[33m8969dee[m comment
+[33m68b7804[m update
+[33m1d1fef7[m update
+[33mb816e72[m update
+[33m6a88bf5[m update
+[33md1ee6fc[m fix: fix styling bug of the home__photo
+[33m8a3f822[m fix: fix script of the home__photo
+[33ma7885fa[m fex: fix linking swiper js to html index
+[33m211f556[m update
+[33m273eb98[m update
+[33m4b0e1b8[m update
+[33mf6c295f[m update
+[33m67a1727[m feat: cerate dynamic homepage using some scripts
+[33m6fb815a[m update
+[33m7707ae2[m some change and update's into app.css and note and index.html
+[33me64a589[m update
+[33m313fe0d[m update
+[33mfa7a262[m docs update
+[33m954515b[m update
+[33mf301001[m update
+[33m3428969[m update
+[33m0c9b416[m update
+[33me613173[m update
+[33mb53df0f[m new code block
+[33mfe3f1aa[m update
+[33m5e0cb6a[m update the change
+[33m4511398[m  this is a sample commit
+[33m36dcf11[m feat: remove all of the php code and recoding the files
+[33mbed77d3[m starting the project refactore and debug
+[33m6495af6[m feat: develop the login.php
+[33m28d2ea0[m doct & feat: create the basic file and coding them
