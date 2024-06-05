@@ -95,4 +95,11 @@ body {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
+.signup__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40rem;
+    width: 100%;
+}
 
