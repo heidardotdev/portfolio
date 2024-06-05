@@ -108,7 +108,8 @@ body {
 }
 input:not(input[type=file]){
     width: 25rem;
-    height: 5rem;
+    height: 3rem;
+    margin-bottom: 2rem;
     border-bottom: .5rem solid #0ABEAD;
     border-top: none;
     border-right: none;
