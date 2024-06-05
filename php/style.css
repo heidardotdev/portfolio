@@ -136,5 +136,18 @@ input[type=file]{
     opacity: 0;
     cursor: pointer;
 }
+.wrapper__image__file-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
 
 
