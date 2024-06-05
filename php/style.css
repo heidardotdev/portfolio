@@ -151,7 +151,7 @@ input[type=file]{
 }
 .signup__question{
     font-size: 1.7rem;
-    
+    margin-bottom: 1.5rem;
 }
 .signup__question a {
     text-decoration: none;
