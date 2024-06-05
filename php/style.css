@@ -102,4 +102,8 @@ body {
     max-width: 40rem;
     width: 100%;
 }
+.wrapper__text{
+    font-size: 1.3rem;
+    color: #9c9c9c;
+}
 
