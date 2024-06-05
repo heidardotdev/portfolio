@@ -149,5 +149,10 @@ input[type=file]{
     left: 0;
     bottom: 0;
 }
+.signup__question{
+    font-size: 1.7rem;
+    
+}
+
 
 
