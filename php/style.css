@@ -19,6 +19,7 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: poppins;
+    text-transform: capitalize;
 }
 
 
