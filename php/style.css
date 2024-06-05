@@ -117,5 +117,7 @@ input:not(input[type=file]){
     outline: none;
 
 }
+.wrapper{
+}
 
 
