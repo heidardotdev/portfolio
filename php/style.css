@@ -106,7 +106,7 @@ body {
     font-size: 1.3rem;
     color: #9c9c9c;
 }
-input{
+input:not(input[type=file]){
     width: 25rem;
     height: 5rem;
     border-bottom: .5rem solid #0ABEAD;
