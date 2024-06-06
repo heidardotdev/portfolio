@@ -169,6 +169,10 @@ input[type=file]{
     text-transform: capitalize;
     transition: all ease-out 250ms;
 }
-
+.signup__btn:hover{
+    background-color: #0ABEAD;
+    cursor: pointer;   
+    color: #fff;
+}
 
 
