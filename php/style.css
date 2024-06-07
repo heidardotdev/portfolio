@@ -187,5 +187,9 @@ input[type=file]{
     body{
         margin: 0 2rem;
     }
+    .login__form,
+    .signup__form{
+        padding: 5rem 2rem;
+    }
 }
 
