@@ -160,7 +160,8 @@ input[type=file]{
     text-decoration: none;
     color: #0ABEAD;
 }
-.signup__btn{
+.signup__btn,
+.login__btn{
     background-color: #d4d4d4;
     outline: none;
     border: none;
