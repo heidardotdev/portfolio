@@ -91,7 +91,7 @@ body {
     border-radius: 1rem;
 }
 
-.signup__title {
+.signup__title, .login__title {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
