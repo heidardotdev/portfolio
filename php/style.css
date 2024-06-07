@@ -191,5 +191,9 @@ input[type=file]{
     .signup__form{
         padding: 5rem 2rem;
     }
+    .login__title,
+    .signup__title{
+        text-align: center;
+    }
 }
 
