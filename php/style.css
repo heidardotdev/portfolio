@@ -92,22 +92,26 @@ body {
     border-radius: 1rem;
 }
 
-.signup__title, .login__title {
+.signup__title,
+.login__title {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-.signup__box{
+
+.signup__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 55rem;
     width: 100%;
 }
-.wrapper__text{
+
+.wrapper__text {
     font-size: 1.3rem;
     color: #9c9c9c;
 }
-input:not(input[type=file]){
+
+input:not(input[type=file]) {
     width: 25rem;
     height: 3rem;
     margin-bottom: 2rem;
@@ -119,10 +123,12 @@ input:not(input[type=file]){
     color: #0ABEAD;
 
 }
-.wrapper__file{
+
+.wrapper__file {
     width: 55rem;
 }
-.wrapper__image-wrapper{
+
+.wrapper__image-wrapper {
     margin: 1.5rem 0;
     background-color: #d4d4d4;
     width: 100%;
@@ -130,15 +136,17 @@ input:not(input[type=file]){
     border-radius: .5rem;
     overflow: hidden;
     position: relative;
-    
-    
+
+
 }
-input[type=file]{
+
+input[type=file] {
     transform: scale(100);
     opacity: 0;
     cursor: pointer;
 }
-.wrapper__image__file-name{
+
+.wrapper__image__file-name {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,18 +158,21 @@ input[type=file]{
     left: 0;
     bottom: 0;
 }
+
 .signup__question,
-.login__question{
+.login__question {
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
+
 .signup__question a,
-.login__question  a {
+.login__question a {
     text-decoration: none;
     color: #0ABEAD;
 }
+
 .signup__btn,
-.login__btn{
+.login__btn {
     background-color: #d4d4d4;
     outline: none;
     border: none;
@@ -173,27 +184,34 @@ input[type=file]{
     text-transform: capitalize;
     transition: all ease-out 250ms;
 }
+
 .signup__btn:hover,
-.login__btn:hover{
+.login__btn:hover {
     background-color: #0ABEAD;
-    cursor: pointer;   
+    cursor: pointer;
     color: #fff;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                       responsive the login and singup                      */
 /* -------------------------------------------------------------------------- */
-@media (width < 768px){
-    body{
+@media (width < 768px) {
+    body {
         margin: 0 2rem;
     }
+
     .login__form,
-    .signup__form{
+    .signup__form {
         padding: 5rem 2rem;
     }
+
     .login__title,
-    .signup__title{
+    .signup__title {
         text-align: center;
     }
-}
 
+    .signup__box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
