@@ -150,7 +150,8 @@ input[type=file]{
     left: 0;
     bottom: 0;
 }
-.signup__question{
+.signup__question,
+.login__question{
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
