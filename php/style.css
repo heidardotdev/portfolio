@@ -155,7 +155,8 @@ input[type=file]{
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
-.signup__question a {
+.signup__question a,
+.login__question  a {
     text-decoration: none;
     color: #0ABEAD;
 }
