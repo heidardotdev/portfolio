@@ -184,6 +184,8 @@ input[type=file]{
 /*                       responsive the login and singup                      */
 /* -------------------------------------------------------------------------- */
 @media (width < 768px){
-    
+    body{
+        margin: 0 2rem;
+    }
 }
 
