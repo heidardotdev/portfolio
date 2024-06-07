@@ -125,7 +125,8 @@ input:not(input[type=file]) {
 }
 
 .wrapper__file {
-    width: 55rem;
+    width: 100%;
+    max-width: 55rem;
 }
 
 .wrapper__image-wrapper {
