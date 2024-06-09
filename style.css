@@ -1,0 +1,218 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: poppins;
+    text-transform: capitalize;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              index file style                              */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+.profile {
+    background-image: url(../images/about-us-man.jpg);
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.text {
+    color: blue;
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+
+.username {
+    color: #ffc400;
+    font-size: 2.3rem;
+    text-transform: capitalize;
+}
+
+.logout {
+    background-color: #861313;
+    padding: 1.5rem 3rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    transition: all 150ms ease-out;
+    border: none;
+    outline: none;
+
+}
+
+.logout:hover {
+    background-color: #c90000;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        singup and login forms style                        */
+/* -------------------------------------------------------------------------- */
+.signup__form,
+.login__form {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 1rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid black;
+    border-radius: 1rem;
+}
+
+.signup__title,
+.login__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.signup__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 55rem;
+    width: 100%;
+}
+
+.wrapper__text {
+    font-size: 1.3rem;
+    color: #9c9c9c;
+}
+
+input:not(input[type=file]) {
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: .5rem solid #0ABEAD;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    color: #0ABEAD;
+
+}
+
+.wrapper__file {
+    width: 100%;
+    max-width: 55rem;
+}
+
+.wrapper__image-wrapper {
+    margin: 1.5rem 0;
+    background-color: #d4d4d4;
+    width: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+
+
+}
+
+input[type=file] {
+    transform: scale(100);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.wrapper__image__file-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.signup__question,
+.login__question {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.signup__question a,
+.login__question a {
+    text-decoration: none;
+    color: #0ABEAD;
+}
+
+.signup__btn,
+.login__btn {
+    background-color: #d4d4d4;
+    outline: none;
+    border: none;
+    padding: 2rem;
+    width: 100%;
+    max-width: 55rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: all ease-out 250ms;
+}
+
+.signup__btn:hover,
+.login__btn:hover {
+    background-color: #0ABEAD;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       responsive the login and singup                      */
+/* -------------------------------------------------------------------------- */
+@media (width < 768px) {
+    body {
+        margin: 0 2rem;
+    }
+
+    .login__form,
+    .signup__form {
+        padding: 2rem;
+    }
+
+    .login__title,
+    .signup__title {
+        text-align: center;
+    }
+
+    .signup__box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
