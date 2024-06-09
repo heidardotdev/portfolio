@@ -1155,7 +1155,8 @@ input[type=file] {
 /*                       responsive the login and singup                      */
 /* -------------------------------------------------------------------------- */
 @media (width < 768px) {
-    body {
+    .signup__body,
+    .login__body {
         margin: 0 2rem;
     }
 
