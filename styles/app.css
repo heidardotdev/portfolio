@@ -1158,6 +1158,7 @@ input[type=file] {
     .signup__body,
     .login__body {
         margin: 0 2rem;
+        padding-top: 0;
     }
 
     .login__form,
