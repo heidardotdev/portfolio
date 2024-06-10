@@ -216,6 +216,9 @@ body {
     color: var(--primary-color);
 }
 
+.menu__link--logout:hover {
+    color: red;
+}
 
 
 .nav__toggle-icon {
@@ -1017,7 +1020,7 @@ body {
     color: #9c9c9c;
 }
 
-.signup__body input:not(input[type=file]), 
+.signup__body input:not(input[type=file]),
 .login__body input:not(input[type=file]) {
     width: 25rem;
     height: 3rem;
