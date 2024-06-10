@@ -16,11 +16,11 @@
         </div>
         <div class="wrapper">
             <p class="wrapper__text">your email</p>
-            <input type="email" name="email">
+            <input type="email" name="email" require>
         </div>
         <div class="wrapper">
             <p class="wrapper__text">your password</p>
-            <input type="password" name="password">
+            <input type="password" name="password" require>
         </div>
         <p class="login__question">not yet registered?<a href="#">register now</a></p>
         <button type="submit" class="login__btn">login now</button>
