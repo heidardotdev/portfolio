@@ -21,22 +21,22 @@
             <div class="singup__left-side">
                 <div class="wrapper">
                     <p class="wrapper__text">enter your name</p>
-                    <input type="text" name="username">
+                    <input type="text" name="username" require>
                 </div>
                 <div class="wrapper">
                     <p class="wrapper__text">enter your password</p>
-                    <input type="password" name="password">
+                    <input type="password" name="password" require>
                 </div>
             </div>
             <div class="singup__right-side">
                 <div class="wrapper">
                     <p class="wrapper__text">enter your email</p>
-                    <input type="email" name="email">
+                    <input type="email" name="email" require>
                 </div>
                 <div class="wrapper">
                     <div class="wrapper__password-box">
                         <p class="wrapper__text">repeat your password</p>
-                        <input type="password" name="repeat-password">
+                        <input type="password" name="repeat-password" require>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         </svg>
                         file name 
                 </div>
-                <input type="file" name="image">
+                <input type="file" name="image" require>
             </div>
         </div>
         <p class="signup__question">already register? <a href="#">login now</a></p>
