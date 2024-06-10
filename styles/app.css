@@ -1016,7 +1016,8 @@ body {
     color: #9c9c9c;
 }
 
-input:not(input[type=file]) {
+.signup__body input:not(input[type=file]), 
+.login__body input:not(input[type=file]) {
     width: 25rem;
     height: 3rem;
     margin-bottom: 2rem;
