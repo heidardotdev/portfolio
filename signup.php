@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
     <link rel="stylesheet" href="./styles/app.css">
-    <link rel="icon" type="image/png" href="../images/app-logo.png">
+    <link rel="icon" type="image/png" href="./images/app-logo.png">
 
 </head>
 
