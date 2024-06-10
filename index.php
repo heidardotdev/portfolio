@@ -39,7 +39,7 @@
                     <a href="#" class="menu__link">Contact</a>
                 </li>
                 <li data-section="contactus" class="menu__item">
-                    <a href="#" class="menu__link">Logout</a>
+                    <a href="#" class="menu__link menu__link--logout">Logout</a>
                 </li>
             </ul>
             <div class="nav__toggle-icon">
