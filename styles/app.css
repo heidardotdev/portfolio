@@ -774,6 +774,7 @@ body {
 .package__body {
     padding: 3rem 0;
     background-color: var(--app-bg-color);
+    border-radius: 0 0 2rem 2rem;
 }
 
 .package-options {
