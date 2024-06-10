@@ -862,6 +862,7 @@ body {
     max-width: 55rem;
     padding: 4.5rem;
     margin-left: auto;
+    border-radius: 2rem;
 }
 
 .contact__title {
