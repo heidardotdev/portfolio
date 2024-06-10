@@ -13,7 +13,9 @@
 <body class="signup__body">
     <form class="signup__form" action="" method="post">
         <h2 class="signup__title">create account</h2>
-        <div class="signup__erorr"></div>
+        <div class="erorr">
+            incorrect password or email
+        </div>
         <div class="signup__box">
             <div class="singup__left-side">
                 <div class="wrapper">
