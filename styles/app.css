@@ -1023,6 +1023,7 @@ body {
 .erorr {
     background-color: #fa707094;
     border: .2rem solid #ff444494;
+    padding: 2rem;
 }
 
 .signup__box {
