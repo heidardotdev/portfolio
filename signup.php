@@ -14,8 +14,9 @@
     <form class="signup__form" action="" method="post" enctype="multipart/form-date"> 
         <h2 class="signup__title">create account</h2>
         <div class="erorr">
-            incorrect password or email
+            please try again later!!!
         </div>
+        
         <div class="signup__box">
             <div class="singup__left-side">
                 <div class="wrapper">
