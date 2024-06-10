@@ -38,6 +38,9 @@
                 <li data-section="contactus" class="menu__item">
                     <a href="#" class="menu__link">Contact</a>
                 </li>
+                <li data-section="contactus" class="menu__item">
+                    <a href="#" class="menu__link">Logout</a>
+                </li>
             </ul>
             <div class="nav__toggle-icon">
                 <div class="nav__toggle-line"></div>
