@@ -708,6 +708,7 @@ body {
 .portfolio-content__img {
     width: 100%;
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .swiper-pagination {
