@@ -149,8 +149,11 @@ body {
     padding-top: 12rem;
 }
 
-*,*::after,*::before{
-    box-sizing: inherit;   
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
 }
 
 
