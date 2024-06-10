@@ -1023,7 +1023,10 @@ body {
 .erorr {
     background-color: #fa707094;
     border: .2rem solid #ff444494;
+    border-radius: 2rem;
     padding: 2rem;
+    width: 100%;
+
 }
 
 .signup__box {
