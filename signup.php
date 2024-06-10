@@ -11,7 +11,7 @@
 </head>
 
 <body class="signup__body">
-    <form class="signup__form" action="" method="post">
+    <form class="signup__form" action="" method="post" enctype="multipart/form-date"> 
         <h2 class="signup__title">create account</h2>
         <div class="erorr">
             incorrect password or email
