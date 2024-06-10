@@ -447,6 +447,7 @@ body {
     z-index: 5;
     height: 100%;
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .service--purple {
