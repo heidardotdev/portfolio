@@ -137,6 +137,7 @@ ul {
 */
 html {
     font-size: 10px;
+    box-sizing: border-box;
 }
 
 body {
@@ -1094,6 +1095,7 @@ input[type=file] {
 /*                       responsive the login and singup                      */
 /* -------------------------------------------------------------------------- */
 @media (width < 768px) {
+
     .signup__body,
     .login__body {
         margin: 0 2rem;
