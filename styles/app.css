@@ -357,6 +357,7 @@ body {
     box-shadow: 0 0 4rem rgb(96 233 255 / 27%);
     min-height: 62rem;
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .about__cover {
