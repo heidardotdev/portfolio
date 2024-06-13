@@ -1,5 +1,18 @@
 <?php
+    include 'config.php';
 
+    if(isset($_COOKIE['user_id'])){
+        $user_id = $_COOKIE['user_id'];
+    }else{
+        $user_id = '';
+        header('location: login.php');
+    }
+    $verify_user = $conn->prepare("SELECT * FROM `form` WHERE unique_id = ?");
+    $verify_user->execute([$user_id]);
+    if($verify_user->rowCount() > 0){
+        $fecth = $verify_user->$fecth(PDO::FETCH_ASSOC);
+
+    }
 ?>
 <!doctype html>
 <html lang="en" >
@@ -7,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Personal Website</title>
+    <title><?=  echo $fecth['name']  ?></title>
     <link rel="icon" type="image/png" href="images/app-logo.png">
     <link rel="stylesheet" href="styles/app.css">
     <link rel="stylesheet" href="styles/responsive.css">
@@ -57,7 +70,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-lg-7">
                     <div class="home__content">
-                        <h3 class="home__name">Hello, IM <span>White Alexa</span></h3>
+                        <h3 class="home__name">Hello, IM <span><?=  echo $fecth['name']  ?></span></h3>
                         <h2 class="home__title">Creative Designer</h2>
                         <p class="home__caption">Freelancer Web/ Mobile UI/UX Designer with Motion Graphics</p>
                         <div class="home__links-wrapper">
@@ -67,7 +80,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <div class="home__photo"></div>
+                    <div class="home__photo">
+                        <img src="img/<?=  echo $fecth['img']  ?>" alt="">
+                    </div>
                 </div>
             </div>
         </div>

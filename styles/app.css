@@ -1020,7 +1020,7 @@ body {
 /*                        signup and login erorr style                        */
 /* -------------------------------------------------------------------------- */
 
-.erorr {
+.error {
     background-color: #fa707094;
     border: .2rem solid #8b0000;
     border-radius: 1rem;
@@ -1031,7 +1031,6 @@ body {
     text-align: center;
     color: #8b0000;
     font-weight: 600;
-    display: none;
 
 }
 
