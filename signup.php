@@ -1,57 +1,54 @@
 <?php
 
-    include 'config.php';
+include 'config.php';
 
-    if(isset($_COOKIE['user_id'])){
-        $user_id = $_COOKIE['user_id'];
+if(isset($_COOKIE['user_id'])){
+    $user_id = $_COOKIE['user_id'];
+}else{
+    $user_id = '';
+}
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $pass = sha1($_POST['pass']);
+    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+    $cpass = sha1($_POST['cpass']);
+    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+    $image = $_FILES['image']['name'];
+    $image = filter_var($image, FILTER_SANITIZE_STRING);
+    $ext = pathinfo($image, PATHINFO_EXTENSION);
+    $rename = random_id().'.'.$ext;
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'img/'.$rename;
+
+    $select_user = $conn->prepare("SELECT * FROM `form` WHERE email = ?");
+    $select_user->execute([$email]);
+
+    if($select_user->rowCount() > 0){
+        $error[] = "email already taken";
     }else{
-        $user_id = '';
-    }
-    if(isset($_POST['submit'])){
-        $name = $_POST['name'];
-        $name = filter_var($name, FILTER_SANITEZ_STRING);
-        $email = $_POST['email'];
-        $email = fileter_var($email, FILTER_SANITEZ_STRING);
-        $pass = sha1($_POST['pass']);
-        $pass = fileter_var($pass, FILTER_SANITEZ_STRING);
-        $cpass = sha1($_POST['cpass']);
-        $cpass = fileter_var($cpass, FILTER_SANITEZ_STRING);
+        if($pass != $cpass){
+            $error[] = "password not matched!!!!"; 
+        }else{      
+            $insert =  $conn->prepare("INSERT INTO `form` (unique_id, name, email, password, img) VALUES(?,?,?,?,?)");
+            $insert->execute([$id, $name, $email, $pass, $rename]);
+            move_uploaded_file($image_tmp_name, $image_folder);
 
-        $image = $_FILES['image']['name'];
-        $image = fileter_var($image, FILTER_SANITEZ_STRING);
-        $ext = pathinfo($image, PATHINFO_EXTENSION);
-        $rename = randome_id().'.'.$ext;
-        $image_tmp_name = $_FILES['image']['tmp_name'];
-        $image_folder = 'img/'.$rename;
+            $verify_user = $conn->prepare("SELECT * FROM `form` WHERE email = ? AND password = ? LIMIT 1 ");
+            $verify_user->execute([$email, $pass]);
+            $fetch = $verify_user->fetch(PDO::FETCH_ASSOC);
 
-
-        $select_user = $conn->prepare("SELECT * FROM `form` WHERE email = ?");
-        $select_user = execute([$email]);
-
-        if($select_user->rowCount() > 0){
-            $error[] = "email already taken";
-        }else{
-            if($pass != $cpass){
-
-                $error[] = "password not machecd!!!!"; 
-            
-            }else{      
-                $insert =  $conn->prepare("INSERT INTO `form` (unique_id, name, email, password, img) VALUES(?,?,?,?,?)");
-                $insert->execute([$id, $name, $pass, $rename]);
-                move_uploaded_file($image_tmp_name, $image_folder);
-
-                $verify_user = $conn->prepare("SELECT * FROM `form` WHERE email = ? AND password = ? LIMIT 1 ");
-                $verify_user->execute([$email, $pass]);
-                $fecth = $verify_user->$fecth(PDO::FETCH_ASSOC);
-
-                if($verify_user->rowCount() > 0){
-                    setcookie('user_id', $fecth["unique_id"], time() + 60*60*24*30, '/' );
-                    header("location: login.php");
-                }
+            if($verify_user->rowCount() > 0){
+                setcookie('user_id', $fetch["unique_id"], time() + 60*60*24*30, '/' );
+                header("location: login.php");
             }
         }
-
     }
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -67,7 +64,7 @@
 </head>
 
 <body class="signup__body">
-    <form class="signup__form" action="" method="post" enctype="multipart/form-date"> 
+    <form class="signup__form" action="" method="post"  enctype="multipart/form-data"> 
         <h2 class="signup__title">create account</h2>
         <?php
             if(isset($error)){
