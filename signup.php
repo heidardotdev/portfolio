@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="signup__body">
-    <form class="signup__form" action="" method="post"  enctype="multipart/form-data"> 
+    <form class="signup__form"  method="post"  enctype="multipart/form-data"> 
         <h2 class="signup__title">create account</h2>
 
         
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="wrapper">
                     <div class="wrapper__password-box">
                         <p class="wrapper__text">repeat your password</p>
-                        <input type="password" name="repeat-password" require>
+                        <input type="password" name="repeat_password" require>
                     </div>
                 </div>
             </div>
