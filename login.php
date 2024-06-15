@@ -14,14 +14,7 @@
 <body class="login__body">
     <form action="" method="post" class="login__form">
         <h1 class="login__title">login in the account</h1>
-        <?php
-            if(isset($error)){
-                foreach($error as $error){
 
-                  echo '<div class="error"> '.$error.' </div>';
-                }
-            }
-        ?>
         <div class="wrapper">
             <p class="wrapper__text">your email</p>
             <input type="email" name="email" require>
