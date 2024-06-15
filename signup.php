@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $repeat_password = $_POST['repeat_password'];
     $image = $_FILES['image']['name'];
-    $target = "images/".basename($image);
+    $target = "pictures/".basename($image);
 
     if ($password == $repeat_password) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -55,11 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="singup__left-side">
                 <div class="wrapper">
                     <p class="wrapper__text">enter your name</p>
-                    <input type="text" name="name" require>
+                    <input type="text" name="username" require>
                 </div>
                 <div class="wrapper">
                     <p class="wrapper__text">enter your password</p>
-                    <input type="password" name="pass" require>
+                    <input type="password" name="password" require>
                 </div>
             </div>
             <div class="singup__right-side">
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="wrapper">
                     <div class="wrapper__password-box">
                         <p class="wrapper__text">repeat your password</p>
-                        <input type="password" name="cpass" require>
+                        <input type="password" name="repeat-password" require>
                     </div>
                 </div>
             </div>
