@@ -334,7 +334,7 @@ body {
     width: 50rem;
     height: 50rem;
     border-radius: 100%;
-    background-image: url('C:/xamp/htdocs/portfolio/pictures/<?php echo $_SESSION[' image']; ?>');
+    background-image: url("../images/header-avatar.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
