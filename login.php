@@ -1,29 +1,5 @@
 <?php
- include 'config.php';
 
- if(isset($_COOKIE['user_id'])){
-     $user_id = $_COOKIE['user_id'];
- }else{
-     $user_id = '';
- }
- if(isset($_POST['submit'])){
-     $email = $_POST['email'];
-     $email = fileter_var($email, FILTER_SANITEZ_STRING);
-     $pass = sha1($_POST['pass']);
-     $pass = fileter_var($pass, FILTER_SANITEZ_STRING);
-     
-     $verify_user = $conn->prepare("SELECT * FROM `form` WHERE email = ? AND password = ? LIMIT 1 ");
-     $verify_user->execute([$email, $pass]);
-     $fecth = $verify_user->$fecth(PDO::FETCH_ASSOC);
-     
-     if($verify_user->rowCount() > 0){
-        setcookie('user_id', $fecth["unique_id"], time() + 60*60*24*30, '/' );
-        header(' location: index.php?id='.$fecth["unique_id"].' ');
-    }else{
-        $error[] = "incorrect password or email";
-
-    }
- }
 ?>
 <!DOCTYPE html>
 <html lang="en">
