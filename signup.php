@@ -49,14 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="signup__body">
     <form class="signup__form" action="" method="post"  enctype="multipart/form-data"> 
         <h2 class="signup__title">create account</h2>
-        <?php
-            if(isset($error)){
-                foreach($error as $error){
 
-                  echo '<div class="error"> '.$error.' </div>';
-                }
-            }
-        ?>
         
         <div class="signup__box">
             <div class="singup__left-side">
