@@ -1,6 +1,36 @@
 <?php
 
 
+include 'db_connect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $repeat_password = $_POST['repeat_password'];
+    $image = $_FILES['image']['name'];
+    $target = "images/".basename($image);
+
+    if ($password == $repeat_password) {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (username, email, password, image) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $username, $email, $hashed_password, $image);
+        $stmt->execute();
+
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+            echo "Image uploaded successfully";
+        } else {
+            echo "Failed to upload image";
+        }
+    } else {
+        echo "Passwords do not match";
+    }
+    $stmt->close();
+    $conn->close();
+}
+
+
 
 
 ?>
