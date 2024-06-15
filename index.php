@@ -1,18 +1,5 @@
 <?php
-include 'config.php';
 
-if(isset($_COOKIE['user_id'])){
-    $user_id = $_COOKIE['user_id'];
-}else{
-    $user_id = '';
-    header('location: login.php');
-    exit();
-}
-$verify_user = $conn->prepare("SELECT * FROM `form` WHERE unique_id = ?");
-$verify_user->execute([$user_id]);
-if($verify_user->rowCount() > 0){
-    $fetch = $verify_user->fetch(PDO::FETCH_ASSOC);
-}
 
 ?>
 <!doctype html>
