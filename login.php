@@ -12,7 +12,7 @@
 
 </head>
 <body class="login__body">
-    <form action="" method="post" class="login__form">
+    <form  method="post" class="login__form">
         <h1 class="login__title">login in the account</h1>
 
         <div class="wrapper">
